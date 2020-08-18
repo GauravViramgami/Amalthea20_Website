@@ -1,0 +1,136 @@
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+  max-width:100vw !important;
+  overflow-x: hidden !important;
+  background:#fff;
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+  
+/*Navbar*/
+nav.navbar{
+  font-family: 'Arvo', serif;
+  font-weight: bold;
+  font-size: larger;
+  background: #16409E;
+}
+  
+.navbar-toggler{
+  background-color: transparent;
+  border: solid darkblue 2px;
+}
+  
+.nav-item .nav-link, .navbar-brand{
+  color:white;
+}
+
+/*Sidebar*/
+.sidebar {
+  position: fixed;
+  margin-top: 1vh;
+  bottom: 0;
+  left: 0;
+  z-index: 100; /* Behind the navbar */
+  padding: 48px 0 0; /* Height of navbar */
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  background: #ECF5FF; 
+}
+
+.sidebar-sticky {
+  position: relative;
+  height: calc(100vh - 48px);
+  padding-top: 2rem;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+.sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    }
+}
+
+.sidebar .nav-link {
+font-weight: 500;
+color: #333;
+}
+
+.sidebar .nav-link .feather {
+margin-right: 4px;
+color: #999;
+}
+
+.sidebar .nav-link.active {
+color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+color: inherit;
+}
+
+.sidebar-heading {
+font-size: .75rem;
+text-transform: uppercase;
+}
+
+/*Dashboard content*/
+[role="main"] {
+    padding-top: 48px; /* Space for fixed navbar */
+  }
+
+#accountinfo{
+  border-radius: 8px;
+  margin-left: 10vh;
+  margin-right:10vh;
+  padding: 15px;
+  font-size: 2vw;
+  margin-left: 12vh;
+  margin-right: 12vh;
+  box-shadow:0px -5px 10px rgba(0,100,255,0.1);
+  background: #ECF5FF; 
+  color: darkblue;
+}
+
+#profilepic{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  float:left;
+}
+ 
+#heading{
+  margin-left: 12vh;
+  margin-right:12vh;
+}
+
+img.eventlogo{
+    width: 90%;
+    height:10%;
+}
+
+div.eventbox{
+    padding: 2.5%;
+    border-radius: 5px;
+    box-shadow:0px -5px 10px rgba(0,100,255,0.1);
+    background: #fff;
+    box-sizing: border-box;
+    font-weight: 300;
+    margin-bottom: 5%;
+    font-size: 1vw;
+    text-align: justify;
+    opacity: 1;   
+}
+
+#hey{
+    margin-left: 10vh;
+}

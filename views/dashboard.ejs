@@ -1,0 +1,93 @@
+<%- include('partials/header') %>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-2 sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#accountinfo"><span data-feather="home"></span>Account<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="collapse" href="#event-collapse"><span data-feather="chevrons-right"></span>Events</a>
+                        </li>
+                        <div id = "event-collapse" class = "panel-collapse collapse">
+                            <a class = "nav-link" href="#">&nbsp;&nbsp; <span data-feather="chevron-right"></span> Registered </a>
+                            <a class = "nav-link" href="#">&nbsp;&nbsp; <span data-feather="chevron-right"></span>Unregistered</a>
+                        </div>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span data-feather="mic"></span>Webinars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span data-feather="bell"></span>Notifications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><span data-feather="layers"></span>Integrations</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main role="main" class="col-10 ml-auto">
+                <br><br>                
+                <h1 class="h1" id="heading">Account Info</h1>
+                <div class = "row">
+                    <div class = "container-fluid" id="accountinfo">                    
+                        <img class = "img-rounded img-responsive" id="profilepic"src = "<%= currentUser.google.picture %>">
+                        <h3>&nbsp;&nbsp;Name: <%=currentUser.name %></h3>
+                        <h3>&nbsp;&nbsp;Email id: <%=currentUser.email %></h3>
+                        <h3>&nbsp;&nbsp;Institute: I don't Know</h3>
+                    </div>
+                </div>
+                <br>
+                <h1 class="h1" id="heading">Events</h1>               
+                <h5 class = "h5" id ="heading">You have registered for the following events.</h3>                
+                <div class = "row">                    
+                    <div class = "container-fluid" id="hey">
+                        <div class = "col-5">
+                            <div class = "eventbox">
+                                <img class = "eventlogo" src = "\images\Dcode_logo.png" alt ="">
+                                <div>
+                                    Do YOU think you have the mettle to code the most efficient algorithms? D’code is back this year to give you some more challenging problems, where your code is the key to win exciting cash prizes.<br><br>D’code is a three-hour competitive programming contest held on Codechef. Light up your coding spirits and seek the accepted (AC) verdict on your submissions!<br><br>The Contest starts on <b>1 November, 21:00 hrs IST.</b>                                                                        
+                                    <br><br>                                    
+                                    <a href="Rulebooks\decoderb.pdf" target = "_blank" class="btn btn-success">See Rulebook</a>
+                                    <a href="https://www.codechef.com/DCOD2019" target = "_blank" class="btn btn-info">Contest Page</a>        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <h1 class="h1" id="heading">Webinars</h1>
+                <h5 class = "h5" id ="heading">You have registered for the following upcoming webinars.</h3>
+                    <div class = "row">                    
+                        <div class = "container-fluid" id="hey">
+                            
+                        </div>
+                    </div> 
+                <br>
+                <h1 class="h1" id="heading">Notifications</h1>
+                <h5 class = "h5" id ="heading">Notifications and updates regarding Amalthea 2020 for you.</h3>
+                    <div class = "row">                    
+                        <div class = "container-fluid" id="hey">
+                            
+                        </div>
+                    </div> 
+            </main>
+        </div>
+    </div>
+    
+    <!--Icons-->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>feather.replace()</script>
+
+    <!-- JavaScript-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="\js\custom.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148907672-1"></script>
+</body>
+</html>
+
