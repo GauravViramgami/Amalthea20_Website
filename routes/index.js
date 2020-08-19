@@ -27,40 +27,39 @@ router.get("/logout",function(req,res){
 })
 
 router.get("/Dashboard", function(req,res){
-  var register=[];
-  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
+  var register = [];
+  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", async function(err, response, body){
     var events = body.split("&&&&***&&&&");
-    for(var i=0; i<events.length; i++)
+    var eventsArr = [];
+    for(var k=0; k<events.length; k++)
     {
-      events[i]=events[i].split("&&&**&&&");
+      eventsArr.push(events[k].split("&&&**&&&"));
+      //events[i]=events[i].split("&&&**&&&");
     }
-    
-    for(var i=0; i<events.length; i++)
+
+    for(var i=0; i<eventsArr.length; i++)
     {
-      if (events[i][5]!="-"){
-        console.log(i,0)
-        request(events[i][5], function(err, response2, body2){
-          var members = body2.split("&&&&***&&&&")
-          console.log(i,1)
+      if (eventsArr[i][5]!="-"){
+        await request(eventsArr[i][5], function(err, response2, body2){
+          var members = body2.split("&&&&***&&&&");
+          var membersArr = [];
           for(var j=0; j<members.length; j++)
-          {console.log(i,2)
-            members[j]=members[j].split("&&&**&&&");
-            
-            if(members[j][0]==req.user.email)
+          {
+            membersArr.push(members[j].split("&&&**&&&"));
+            //members[j]=members[j].split("&&&**&&&");
+            if(membersArr[j][0] == req.user.email)
             {
-              register.push(events[i])
-              console.log(i,3)
-              break
-            }            
-          }          
-          
-          console.log(register)
-          res.render("dashboard")
-      })
-      
+              console.log(i);
+              register.push(eventsArr[i]);
+              break;
+            }
+          }
+      });
+
     }
   }
-})
-})
+  res.render("dashboard");
+});
+});
 
 module.exports = router
