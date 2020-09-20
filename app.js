@@ -7,7 +7,7 @@ var mongoose = require("mongoose"),
   GoogleStrategy = require('passport-google-oauth20').Strategy
 // findOrCreate = require('mongoose-findorcreate')
 
-mongoose.connect("mongodb://localhost/ABC", {
+mongoose.connect("mongodb+srv://gaurav:gaurav@cluster0-8f0ei.mongodb.net/Amalthea", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -92,6 +92,6 @@ var eventsRoutes = require("./routes/events")
 app.use("/events/", eventsRoutes)
 
 // Server http://localhost:3000/
-app.listen(process.env.PORT || 3000, function () {
+app.listen(3000, function () {
   console.log("app is running...")
 })
