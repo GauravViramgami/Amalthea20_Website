@@ -48,7 +48,7 @@ app.use(function(req,res,next){
 passport.use(new GoogleStrategy({
     clientID: "135466675044-749r5mhebcd0rvbnf9se8rcumjmttk0k.apps.googleusercontent.com",
     clientSecret: "sd4H51v5zVEn_CRmnoxB8HfH",
-    callbackURL: "http://localhost:3000/auth/google/secrets",
+    callbackURL: " https://pacific-caverns-51977.herokuapp.com/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function (accessToken, refreshToken, profile, cb) {
