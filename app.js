@@ -7,7 +7,7 @@ var mongoose = require("mongoose"),
   GoogleStrategy = require('passport-google-oauth20').Strategy
 // findOrCreate = require('mongoose-findorcreate')
 
-mongoose.connect("mongodb+srv://gaurav:gaurav@cluster0-8f0ei.mongodb.net/Amalthea?retryWrites=true&w=majority", {
+mongoose.connect("mongodb://localhost/ABC", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -48,7 +48,7 @@ app.use(function(req,res,next){
 passport.use(new GoogleStrategy({
     clientID: "135466675044-749r5mhebcd0rvbnf9se8rcumjmttk0k.apps.googleusercontent.com",
     clientSecret: "sd4H51v5zVEn_CRmnoxB8HfH",
-    callbackURL: "https://pacific-caverns-51977.herokuapp.com/auth/google/secrets",
+    callbackURL: "http://localhost:3000/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function (accessToken, refreshToken, profile, cb) {
@@ -87,6 +87,9 @@ passport.use(new GoogleStrategy({
 
 var indexRoutes = require("./routes/index")
 app.use("/", indexRoutes)
+
+var eventsRoutes = require("./routes/events")
+app.use("/events/", eventsRoutes)
 
 // Server http://localhost:3000/
 app.listen(process.env.PORT || 3000, function () {

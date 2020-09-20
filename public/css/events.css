@@ -63,103 +63,48 @@ div.Spacing{
 }
 
 div.h-line{
-    margin-top: 58px;
     background: #f747d0;
-    height: 5px;
+    height: 7px;
 }
 
-/*Accounr Info*/
-div.Account{
-    padding-left: 5.5vw;
-    padding-right: 5.5vw;
+/*Event Image*/
+div.Evento{
+    padding-left: 37.5vw;
 }
-
-h1.Account-heading{
-    font-family: 'Karla', sans-serif;
-    font-weight: bold;
-    color: #1685f8;
-    font-size: 40px;
-}
-
-img.Account-photo{
-    width: 120px;
-    height: 120px;
-    margin-left: 2vw;
-    margin-right: 1.5vw;
-}
-
-div.vl-account{
-    border-left: 6px solid #f7f429;
-    height: 120px;
-}
-
-div.Account-Info{
-    margin-left: 1vw;
-}
-
-.Account-Info h2{
-    font-size: 28px;
+img.event-image{
+    width: 25vw;
 }
 
 @media only screen and (max-width: 666px) {
-    img.Account-photo{
-        margin: auto;
-        width: 120px;
-        height: 120px;
+    img.event-image{
+        width: 80vw;
     }
-
-    div.vl-account{
-        border-left: 0px;
-        height: 0px;
-    }
-
-    .Account-Info h2{
-        font-size: 24px;
+    div.Evento{
+        padding-left: 10vw;
     }
 }
 
-
-/*Events*/
-div.Events{
+/*About*/
+div.About{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
 }
 
-h1.Event-heading{
+h1.About-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
+    color: #1685f8;
+    font-size: 35px;
+    text-align: left;
+    letter-spacing: -1px;
 }
 
-div.EventNameTime{
-    background-color: lightgray;
-}
-
-div.EventRow{
-    display: inline-block;
-    width: 100%;
-}
-
-div.EventName{
-    margin-left: 1vw;
-    float: left;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-div.EventTime{
-    margin-right: 1vw;
-    float: right;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-div.Rulebook{
-    background-color: #a2dbd7;
-    font-size: 24px;
-    text-align: center;
-    font-weight: 500;
+div.About-text{
+    margin-top: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12;
 }
 
 div.vl{
@@ -167,32 +112,56 @@ div.vl{
     height: 6vh;
 }
 
-/*Webinars*/
-div.Webinar{
+/*Second*/
+div.Second{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
 }
 
-h1.Webinar-heading{
+h1.Second-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
+    color: #ff1493;
+    font-size: 35px;
+    text-align: left;
+    letter-spacing: -1px;
 }
 
-/*Notifications*/
-div.Notifications{
+div.Second-text{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12;
+}
+
+div.gapspacing{
+    padding-left: 5vw;
+    text-align: left;
+}
+
+/*Third*/
+div.Third{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
 }
 
-h1.Notifications-heading{
+h1.Third-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
+    color: #00c2ba;
+    font-size: 35px;
+    text-align: left;
+    letter-spacing: -1px;
 }
 
+div.Third-text{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12; 
+}
 
 /*Footer*/
 div.Footer{

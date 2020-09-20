@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dashboard | Amalthea 2020</title>
+    <title>Cryptix | Amalthea 2020</title>
     <meta name = "description" value = "Amalthea is the Annual Tech Summit of IIT Gandhinagar.">
     <link rel = "icon" href = "\images\Amalthea_title_logo.png">
     <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel = "stylesheet" href = "\css\dashboard.css">
+    <link rel = "stylesheet" href = "\css\events.css">
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Arvo Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!--Montserrat Font-->
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Karla Font-->
@@ -22,84 +22,60 @@
         <!--Navbar-->
         <header>
             <nav class = "navbar navbar-expand fixed-top navbar-dark"> <!--navbar expand so that it never becomes vertical-->
-                <a class="navbar-brand" href="/"> 
-                    <img src = "\images\logo.svg" width = "35px" height = "47px" alt = "">
+                <a class="navbar-brand" href="\"> 
+                    <img src = "\images\logo.svg" width = "30px" height = "48px" alt = "">
                 </a>                
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-events" href="#Events">Events</a>
+                        <a class="nav-link" id = "nav-item-events" href="/events/cryptorush">CryptoRush</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-webinar" href="#Webinar">Webinar</a>
+                        <a class="nav-link" id = "nav-item-webinar" href="/events/electronica">Electronica</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-contact" href="#Contact">Contact</a>
+                        <a class="nav-link" id = "nav-item-contact" href="/events/dcode">D'Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-login" href="/logout">Logout</a>
+                        <a class="nav-link" id = "nav-item-login" href = "/events/quickwit">QuickWit</a>
                     </li>
                 </ul>                
             </nav>
         </header> 
-        <div class = "h-line"></div>
 
-        <!--Account Info-->
-        <br>
-        <div class = "Account">
-            <h1 class = "Account-heading">Account</h1>
-            <div class = "container-fluid">
-                <div class = "row">
-                    <img class = "rounded-circle Account-photo" src = "<%= currentUser.google.picture %>" alt = "">
-                    <div class = "vl-account"></div>                
-                    <div class = "Account-Info">
-                        <h2>Name : <%=currentUser.name %></h2>
-                        <h2>Email : <%=currentUser.email %></h2>
-                    </div>                              
-                </div>
+        <br><br><br>
+        <!--Event Image-->
+        <div class = "Evento">
+            <img class = "event-image" src = "\images\Cryptix_logo.png" alt = "">
+        </div>        
+
+        <!--About Quickwit-->  
+        <br>            
+        <div class = "About">
+            <h1 class = "About-heading"></h1>
+            <div class = "row">
+                <div class = "col-12 About-text"></div>
+                <!--<div class = "col-md-4 About-video"></div>-->
             </div>
         </div>
 
-        <!--Registered Events-->
+        <!--Leaderboard-->
         <br>
-        <div class = "Events" id = "Events">
-            <h1 class = "Event-heading">Registered Events</h1>
-            <div class = "container-fluid">
-                <% for(var i = 0; i<data.length; i++){ %>    
-                    
-                    <div class = "row">
-                        <div class = "col-sm-9 col-md-10 EventNameTime">
-                            <div class = "row EventRow">
-                                <div class = "EventName"><%= data[i][0] %></div>
-                                <div class = "EventTime">21:00 November 3</div>
-                            </div>
-                        </div>
-                        <div class = "col-sm-3 col-md-2 Rulebook"> <a href="<%= data[i][4] %>">Rulebook</a>   </div>
-                    </div>
-                    <br>      
-                <% } %>
-                <div class = "vl"></div>
-            </div>
-        </div>
-        <!--Webinars-->
-        <br>
-        <div class = "Webinar" id = "Webinar">
-            <h1 class = "Webinar-heading">Webinar</h1>
-            <br>
-            <div class = "vl"></div>
+        <div class = "Second">
+            <h1 class = "Second-heading">Coming Soon</h1>
         </div>
 
-        <!--Notifications-->
+        <!--Previous Weeks-->
         <br>
-        <div class = "Notifications" id = "Notifications">
-            <h1 class = "Notifications-heading">Notifications</h1>
+        <div class = "Third">
+            <h1 class = "Third-heading"></h1>
         </div>
 
         <!--Footer-->
         <br>
         <div class = "h-line"></div>
         <footer>
-            <div class = "Footer" id = "Contact">
-                <div class = "row">
+            <div class = "Footer">
+                <div class = "row"  id = "Contact">
                     <div class = "col-lg-4 col-md-4 col-sm-12" id = "Social">
                         <h2 class = "Footer-text">Amalthea 2020</h3>
                         <ul class="social-network social-circle">
@@ -111,11 +87,11 @@
                         </ul>				
                     </div>
                     <div class = "col-lg-4 col-md-4 col-sm-12" id = "Email">                            
-                        <a href = "" class = "Email" target = "_blank"><i class="far fa-envelope fa-3x"></i></a>
+                        <a href = "" class = "Email" target = "_blank"><i class="far fa-envelope fa-2x"></i></a>
                         <a href = "" class = "Email-text" target = "_blank">&nbsp;amalthea@iitgn.ac.in</a>
                     </div>
                     <div class = "col-lg-4 col-md-4 col-sm-12" id = "App">
-                        <a href = "" class = "Phone" target = "_blank"><i class="fas fa-mobile-alt fa-3x"></i></a>
+                        <a href = "" class = "Phone" target = "_blank"><i class="fas fa-mobile-alt fa-2x"></i></a>
                         <a href = "" class = "Phone-text" target = "_blank">&nbsp;Download our app</a>
                     </div>
                 </div>    

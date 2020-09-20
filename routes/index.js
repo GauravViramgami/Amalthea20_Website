@@ -5,7 +5,18 @@ var passport = require("passport")
 var user = require("../modules/user")
 
 router.get("/", function (req, res) {
-  res.render("index")
+  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
+
+  var events = body.split("&&&&***&&&&");
+
+    for(var i=0; i<events.length; i++)
+    {
+      events[i]=events[i].split("&&&**&&&");
+    }
+    // res.send(events)
+    res.render("index",{events:events})
+  })
+  
 })
 
 router.get('/auth/google',
@@ -18,7 +29,7 @@ router.get('/auth/google/secrets',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/Dashboard');
   });
 
 router.get("/logout",function(req,res){
@@ -26,40 +37,67 @@ router.get("/logout",function(req,res){
     res.redirect("/")
 })
 
-router.get("/Dashboard", function(req,res){
-  var register = [];
-  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", async function(err, response, body){
-    var events = body.split("&&&&***&&&&");
-    var eventsArr = [];
-    for(var k=0; k<events.length; k++)
-    {
-      eventsArr.push(events[k].split("&&&**&&&"));
-      //events[i]=events[i].split("&&&**&&&");
-    }
+router.get("/Dashboard",isLogedIn, function(req,res){
+  var register=[];
+  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
 
-    for(var i=0; i<eventsArr.length; i++)
+  var events = body.split("&&&&***&&&&");
+
+    for(var i=0; i<events.length; i++)
     {
-      if (eventsArr[i][5]!="-"){
-        await request(eventsArr[i][5], function(err, response2, body2){
-          var members = body2.split("&&&&***&&&&");
-          var membersArr = [];
+      events[i]=events[i].split("&&&**&&&");
+    }
+    // res.send(events)
+    for(var i=0; i<events.length; i++)
+    {
+      if (events[i][4]!="-"){
+        
+        request(events[i][4], function(err, response2, body2){
+          var members = body2.split("&&&&***&&&&")
+          
           for(var j=0; j<members.length; j++)
           {
-            membersArr.push(members[j].split("&&&**&&&"));
-            //members[j]=members[j].split("&&&**&&&");
-            if(membersArr[j][0] == req.user.email)
+            members[j]=members[j].split("&&&**&&&");
+            
+            if(members[j][0]==req.user.email)
             {
-              console.log(i);
-              register.push(eventsArr[i]);
-              break;
-            }
+              
+              register.push(members[j][6])
+              
+              break
+            }            
+          }         
+          // res.send(register)
+          var data=[]
+          var nameOfEvents=[]
+          for(var i=0; i<events.length; i++)
+          {
+            nameOfEvents.push(events[i][0])
+            
+            
           }
-      });
+          for(var j=0; j<register.length; j++)
+          {
+            data.push(events[nameOfEvents.indexOf(register[j])])
+          }
+          // res.send(data)
+          res.render("dashboard",{data:data})
+      })
+     
+      
 
     }
   }
-  res.render("dashboard");
-});
-});
+})
+})
+
+function isLogedIn(req,res,next){
+  if(req.isAuthenticated()){
+      return next()
+  }else{
+      res.redirect("/auth/google")
+  }
+}
+
 
 module.exports = router

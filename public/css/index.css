@@ -62,62 +62,88 @@ div.Spacing{
     background:#3E435E; 
 }
 
-div.h-line{
-    margin-top: 58px;
-    background: #f747d0;
-    height: 5px;
+/*Theme*/
+div.Theme{
+    height: 80vh;
+    background: #161616;
 }
 
-/*Accounr Info*/
-div.Account{
+div.loopingvideo{
+    position: absolute;
+    left: 20vw;
+}
+
+video{
+    height: 76.5vh;
+}
+
+div.Theme-Text {
+    position: relative;
+    padding-left: 5.5vw;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+div.Theme-Text h1{
+    color:white;
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: -10px;
+}
+
+div.Theme-Text h1.aml2020-text {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 777px) {
+    div.Theme{
+        height: 60vh;
+    }
+
+    div.Theme-Text {
+        padding-left: 5.5vw;
+        padding-top: 8vh;
+        padding-bottom: 0;
+    }
+
+    video{
+        height: 0;
+    }
+}
+
+div.h-line{
+    background: #f747d0;
+    height: 7px;
+}
+
+/*About*/
+div.About{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
 }
 
-h1.Account-heading{
+h1.About-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
     color: #1685f8;
-    font-size: 40px;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: -1px;
 }
 
-img.Account-photo{
-    width: 120px;
-    height: 120px;
-    margin-left: 2vw;
-    margin-right: 1.5vw;
+div.About-text{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12;
 }
 
-div.vl-account{
+div.vl{
     border-left: 6px solid #f7f429;
-    height: 120px;
+    height: 6vh;
 }
-
-div.Account-Info{
-    margin-left: 1vw;
-}
-
-.Account-Info h2{
-    font-size: 28px;
-}
-
-@media only screen and (max-width: 666px) {
-    img.Account-photo{
-        margin: auto;
-        width: 120px;
-        height: 120px;
-    }
-
-    div.vl-account{
-        border-left: 0px;
-        height: 0px;
-    }
-
-    .Account-Info h2{
-        font-size: 24px;
-    }
-}
-
 
 /*Events*/
 div.Events{
@@ -128,46 +154,26 @@ div.Events{
 h1.Event-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
-}
-
-div.EventNameTime{
-    background-color: lightgray;
-}
-
-div.EventRow{
-    display: inline-block;
-    width: 100%;
-}
-
-div.EventName{
-    margin-left: 1vw;
-    float: left;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-div.EventTime{
-    margin-right: 1vw;
-    float: right;
-    font-size: 24px;
-    font-weight: 500;
-}
-
-div.Rulebook{
-    background-color: #a2dbd7;
-    font-size: 24px;
+    color: #ff1493;
+    font-size: 35px;
     text-align: center;
-    font-weight: 500;
+    letter-spacing: -1px;
 }
 
-div.vl{
-    border-left: 6px solid #f7f429;
-    height: 6vh;
+div.Event-text{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12;
 }
 
-/*Webinars*/
+img.event-image{
+    width: 100%;
+    height: 25vh;
+}
+
+/*Webinar*/
 div.Webinar{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
@@ -176,23 +182,88 @@ div.Webinar{
 h1.Webinar-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
+    color: #00c2ba;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: -1px;
 }
 
-/*Notifications*/
-div.Notifications{
+div.Webinar-text{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #0c0f12; 
+}
+
+/*Instagram Feed*/
+div.Insta{
     padding-left: 5.5vw;
     padding-right: 5.5vw;
 }
 
-h1.Notifications-heading{
+h1.Insta-heading{
     font-family: 'Karla', sans-serif;
     font-weight: bold;
-    color: #0abcd6;
-    font-size: 32px;
+    color: #007bff;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: -1px;
 }
 
+/*Testimonials*/
+div.Testimonial{
+    padding-left: 5.5vw;
+    padding-right: 5.5vw;
+}
+
+h1.Testimonial-heading{
+    font-family: 'Karla', sans-serif;
+    font-weight: bold;
+    color: #0d98ba;
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.personInfo {
+    padding:25px 10px !important;    
+    color:#000;
+    background: #FFF !important;
+    border:1px solid #0d98ba; 
+    text-align: center;
+    margin:0px 3px;
+    font-size:12pt;
+  }
+  
+.personInfo .quote {
+    margin-top:4vh;   
+}
+
+.personInfo .name {
+    margin-top:4vh;   
+}
+
+.testimonials {
+    text-align: center;
+    font-size: 2.5vw;
+    color:#454B69;
+}
+
+.testimonials i {
+    background: #fff;
+    padding:15px;
+    border-radius: 100%;
+    border:1px solid #454B69;
+}
+
+.testimonials .underLine {
+    width: 10vh;
+    margin-left:50%;
+    margin-top:5px;
+    background:#454B69; 
+    height: 5px;
+}
 
 /*Footer*/
 div.Footer{
@@ -322,11 +393,12 @@ a.Phone-text{
 }
 
 @media only screen and (max-width: 777px) {
-    #Social, #Email, #App{
-        padding-left: 20vw;
+    #Social{
+        padding-left: 18vw;
     }
 
     #Email, #App{
+        padding-left: 25vw;
         padding-top: 4vw;
     }
 
