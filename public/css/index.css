@@ -9,7 +9,7 @@ header {
 }
 
 .nav-btn {
-  width: 120px;
+  width: 100%;
   border-radius: 30px;
   background-color: #00bcd4;
   font-weight: bold;
