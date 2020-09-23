@@ -1,3 +1,28 @@
+.gradient {
+  position: relative;
+  background: rgb(2,0,36);
+  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);
+  z-index: 1;
+}
+
+.gradient::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(2,0,36);
+  background: linear-gradient(191deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 55%, rgba(77,115,230,1) 64%, rgba(0,212,255,1) 100%);
+  z-index: -1;
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.gradient:hover::before {
+  opacity: 1;
+}
+
 header {
   position: fixed;
   padding: 3%;
@@ -59,10 +84,10 @@ nav.navbar {
   width: 80px;
   height: 55px;
   transition-property: width;
-  transition-duration: 0.8s;
+  transition-duration: 0.5s;
   overflow: hidden;
-  background: rgb(2,0,36);
-  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);
+  /*background: rgb(2,0,36);
+  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);*/
   border-radius: 30px;
   margin-right: 0;
 }
