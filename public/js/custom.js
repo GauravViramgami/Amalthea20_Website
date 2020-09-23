@@ -10,17 +10,3 @@ function myHandler(e) {
     player.load();
     player.play();
 }
-
-// int clickCount = 0;
-//
-// function openNav() {
-//   clickCount++;
-//   /*if (clickCount%2 == 0) {*/
-//     var nav = document.getElementById("hor-nav");
-//     nav.style.width = "120%";
-//     nav.style.height = "80%";
-//   // } else {
-//   //   document.getElementById("hor-nav").style.width = "120%";
-//   //   document.getElementById("hor-nav").style.height = "80%";
-//   // }
-// }

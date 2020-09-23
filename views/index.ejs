@@ -27,10 +27,10 @@
   <div class="site">
     <!--Done for responsivesness cause a mobile ignores the css for the body tags-->
     <!--Navbar-->
-   <!-- <header>
+    <!-- <header>
       <nav class="navbar navbar-expand fixed-top navbar-dark"> -->
-        <!--navbar expand so that it never becomes vertical-->
-        <!-- <a class="navbar-brand" href="index.html">
+    <!--navbar expand so that it never becomes vertical-->
+    <!-- <a class="navbar-brand" href="index.html">
           <img src="\images\logo.svg" width="35px" height="47px" alt="">
         </a>
         <ul class="navbar-nav ml-auto">
@@ -63,7 +63,7 @@
         <div class="container">
           <div id="hor-nav" class="row nav-row">
             <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
-              <input class="img-btn" type="image" src="\images\logo.png" name="" value="" onclick="openNav()">
+              <input id="img-btn" class="img-btn btn" type="image" src="\images\logo.png" name="" value="">
             </div>
             <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
               <button type="button" class="btn btn-primary nav-btn">Home</button>
@@ -267,6 +267,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148907672-1"></script>
     <script src="\js\custom.js"></script>
+    <script>
+      var i = 0;
+      document.getElementById("img-btn").onclick = function() {
+        i++;
+        if (i % 2 != 0) {
+          var nav = document.getElementById("hor-nav");
+          nav.style.width = "120%";
+          nav.style.height = "80%";
+        } else {
+          var nav = document.getElementById("hor-nav");
+          nav.style.width = "80px";
+          nav.style.height = "60px";
+        }
+      }
+    </script>
+
   </div>
 </body>
 

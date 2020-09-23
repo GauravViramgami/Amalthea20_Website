@@ -31,10 +31,10 @@ header {
   overflow: hidden;
 }
 
-nav div:hover #hor-nav{
+/* nav div:hover #hor-nav{
   width: 120%;
   height: 80%;
-}
+} */
 
 html, body, .site{
     margin: 0 !important;
