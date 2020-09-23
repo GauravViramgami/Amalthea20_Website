@@ -4,6 +4,10 @@ header {
   z-index: 1000;
 }
 
+.fa-user {
+  color: white;
+}
+
 .fixed-top {
   padding: 4%;
 }
@@ -13,15 +17,17 @@ header {
 }
 
 .nav-btn {
+  font-family: Karla;
   padding: 2%;
   padding-top: 1%;
   padding-bottom: 1%;
   width: 100%;
   border-style: none;
   background-color: transparent;
-  font-size: 1.3rem;
-  font-weight: bolder;
+  font-size: 1.2rem;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
 }
 
 .btn:hover {
@@ -51,9 +57,26 @@ nav.navbar {
   transition-duration: 0.8s;
   overflow: hidden;
   background: rgb(2,0,36);
-  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(116,116,229,1) 44%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);
   border-radius: 30px;
   margin-right: 0;
+}
+
+.nav-btn:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: black;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+.nav-btn:hover:after {
+  width: 50%;
+  left: 25%;
 }
 
 /* nav div:hover #hor-nav{
