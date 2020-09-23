@@ -4,22 +4,39 @@ header {
   z-index: 1000;
 }
 
+.fixed-top {
+  padding: 4%;
+}
+
 .nav-col {
   margin: 10px;
 }
 
 .nav-btn {
+  padding: 2%;
   width: 100%;
-  border-radius: 30px;
-  background-color: #00bcd4;
-  font-weight: bold;
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: white;
+}
+
+.btn:hover {
+  color: black;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+nav.navbar {
+  background: transparent !important;
+  padding-top: 2% !important;
 }
 
 .img-btn {
   width: 40px;
   padding: 5px;
   border-radius: 100%;
-  background-color: #726a95;
 }
 
 #hor-nav{
@@ -29,8 +46,10 @@ header {
   transition-property: width;
   transition-duration: 0.8s;
   overflow: hidden;
-  background-color: #cffffe;
+  background: rgb(2,0,36);
+  background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(116,116,229,1) 44%, rgba(0,212,255,1) 100%);
   border-radius: 30px;
+  margin-right: 0;
 }
 
 /* nav div:hover #hor-nav{
