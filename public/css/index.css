@@ -8,6 +8,10 @@ header {
   color: white;
 }
 
+.login {
+  margin-left: 10%;
+}
+
 .fixed-top {
   padding: 4%;
 }
@@ -27,7 +31,7 @@ header {
   font-size: 1.2rem;
   color: white;
   text-transform: uppercase;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.1rem;
 }
 
 .btn:hover {
@@ -40,6 +44,7 @@ nav.navbar {
   background: transparent !important;
   padding-top: 2% !important;
   padding-left: 6% !important;
+  width: 90%;
 }
 
 .img-btn {
