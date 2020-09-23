@@ -1,225 +1,273 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Amalthea 2020</title>
-    <meta name = "description" value = "Amalthea is the Annual Tech Summit of IIT Gandhinagar.">
-    <link rel = "icon" href = "\images\Amalthea_title_logo.png">
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel = "stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link rel = "stylesheet" href = "\css\index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Arvo Font-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!--Montserrat Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> <!--Karla Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> <!--Roboto Font-->
-    <script src="https://kit.fontawesome.com/9d7cc8090d.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Amalthea 2020</title>
+  <meta name="description" value="Amalthea is the Annual Tech Summit of IIT Gandhinagar.">
+  <link rel="icon" href="\images\Amalthea_title_logo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="\css\index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!--Arvo Font-->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!--Montserrat Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!--Karla Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <!--Roboto Font-->
+  <script src="https://kit.fontawesome.com/9d7cc8090d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    <div class = "site"> <!--Done for responsivesness cause a mobile ignores the css for the body tags-->
-        <!--Navbar-->
-        <header>
-            <nav class = "navbar navbar-expand fixed-top navbar-dark"> <!--navbar expand so that it never becomes vertical-->
-                <a class="navbar-brand" href="index.html"> 
-                    <img src = "\images\logo.svg" width = "35px" height = "47px" alt = "">
-                </a>                
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-events" href = "#Eventssection">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-webinar" href = "#Webinarsection">Webinar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id = "nav-item-contact" href = "#Contact">Contact</a>
-                    </li>
-                    
-                    <% if (!currentUser){ %>
-						<li class="nav-item ">
-						    <a class="nav-link" id = "nav-item-login" href="/auth/google">Login with Google</a>
-						</li>
-					<% } else{ %>
-						<li class="nav-item">
-                            <a class="nav-link" id = "nav-item-login" href="/Dashboard">Dashboard</a>
-                        </li>
-                        
-					<% } %>	
-                </ul>                
-            </nav>
-        </header> 
+  <div class="site">
+    <!--Done for responsivesness cause a mobile ignores the css for the body tags-->
+    <!--Navbar-->
+   <!-- <header>
+      <nav class="navbar navbar-expand fixed-top navbar-dark"> -->
+        <!--navbar expand so that it never becomes vertical-->
+        <!-- <a class="navbar-brand" href="index.html">
+          <img src="\images\logo.svg" width="35px" height="47px" alt="">
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" id="nav-item-events" href="#Eventssection">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-item-webinar" href="#Webinarsection">Webinar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-item-contact" href="#Contact">Contact</a>
+          </li>
 
-        <!--Theme-->
-        <div class = "Theme">
-            <br> 
-            <div class = "loopingvideo">
-                <video id = "myVideo" muted autoplay> 
-                    <source src = "main-start.mp4" id = "mp4Source" type="video/mp4">
-                </video>
-            </div>          
-            <div class = "Theme-Text">
-                <h1 class="aml2020-text">AMALTHEA 2020</h1>
-                <h1>connect.</h1>
-                <h1>collaborate.</h1>
-                <h1>create.</h1>
-            </div>
-        </div>
-        <div class = "h-line"></div>
+          <% if (!currentUser){ %>
+          <li class="nav-item ">
+            <a class="nav-link" id="nav-item-login" href="/auth/google">Login with Google</a>
+          </li>
+          <% } else{ %>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-item-login" href="/Dashboard">Dashboard</a>
+          </li>
 
-        <!--About Theme-->
-        <br><br>
-        <div class = "About">
-            <h1 class = "About-heading">Our Theme</h1>
-            <div class = "row">
-                <div class = "col-12 About-text">We have witnessed exponential growth in the development of technology and its applications in the past few decades. This development has surpassed the human imagination. Currently, we are in the midst of a pandemic which has engulfed the entire world and led to countless deaths. In this time of pandemic, we are forced to stay apart. We all are locked at our homes without our friends. The theme "Connect Collaborate Create" is brought up with an idea to connect our hearts, collaborate our efforts and create an unprecedented Amalthea amidst this pandemic.</div>
-                <!--<div class = "col-md-4 About-video"></div>-->
-            </div>
-        </div>
+          <% } %>
+        </ul>
+      </nav>
+    </header>  -->
 
-        <!--Events-->
-        <div id = "Eventssection"></div>
-        <br>
-        <br>
-        <div class = "Events" id = "Events">
-            <h1 class = "Event-heading">Events</h1>
-            <div class = "Event-text">Amalthea events are a platform for minds across the nation to showcase their talents in a wide variety of fields. Whether one is looking to add something to their skill set, an amateur wanting to brush up his art, or an expert looking to test his skills against the brightest minds of the nation, our events serve them all. Amalthea has a rich tradtion of events which recieve international participation. In this edition, Amalthea events are going to held completely online.</div>
-            <br> <!--Row 1-->
-            <div class = "row">
-                <% for(var i = 0; i<events.length; i++){ %>
-                <!--CryptoRush-->
-                    <div class = "col-md-4 col-sm-6 col-xs-12">
-                        <div class = "eventbox">
-                            <img src = "<%=events[i][2] %>" class = "event-image" alt = "">
-                            <div>
-                                <%=events[i][1] %><br>                                   
-                                <a href = "<%=events[i][3] %>" target = "_blank" class=""  >Know more</a>        
-                                <br>
-                            </div>
-                        </div>
-                    </div>
-                <% } %>
-                
+    <header>
+      <nav>
+        <div class="container">
+          <div id="hor-nav" class="row nav-row">
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <input class="img-btn" type="image" src="\images\logo.png" name="" value="" onclick="openNav()">
             </div>
-            <br>
-            <!--<div class = "vl"></div>-->
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <button type="button" class="btn btn-primary nav-btn">Home</button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <button type="button" class="btn btn-primary nav-btn">Events</button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <button type="button" class="btn btn-primary nav-btn">Webinars</button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <button type="button" class="btn btn-primary nav-btn">Amalthea Project</button>
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <button type="button" class="btn btn-primary nav-btn">Login</button>
+            </div>
+          </div>
         </div>
 
-        <!--Webinars-->
-        <div id = "Webinarsection"></div>
-        <br>
-        <div class = "Webinar" id = "Webinar">
-            <h1 class = "Webinar-heading">Webinars</h1>
-            <div class = "Webinar-text">
-                Since its inception 11 years ago, the Conclave has been one of the pillars of Amalthea. This year, Conclave talks will be organized virtually in form of Webinars. The Webinars aim to spread ideas, foster innovation, inquisition and creativity among the masses. They will be organised on a range of techno-managerial fields, current affairs, cutting-edge high impact research and entrepreneurship.
-                The Webinars will host speakers, visionaries, and leaders who will spread knowledge, provide insights, and discuss solutions. The talks will also facilitate interaction between audiences all over the country and the eminent speakers. Thus, going by this year’s theme, the Webinars will serve as a means to “Connect, Collaborate, and Create” for participants. 
-            </div>
-        </div>
+      </nav>
+    </header>
 
-        <!--Instagram Feed-->
-        <br>
-        <br>
-        <div class = "Insta" id = "Insta">
-            <h1 class = "Insta-heading"><i class="fa fa-instagram"></i></h1>
-            <h1 class = "Insta-heading">Amalthea on Instagram</h1>
-            <br>
-            <!-- Place <div> tag where you want the feed to appear -->
-            <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
-            <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
-            <script type="text/javascript">
-            /* curator-feed-default-feed-layout */
-            (function(){
-            var i, e, d = document, s = "script";i = d.createElement("script");i.async = 1;
-            i.src = "https://cdn.curator.io/published/63246bee-fb2e-471a-9504-368cd9fc50d1.js";
-            e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
-            })();
-            </script>
-        </div>
-
-        <!--Testimonial-->
-        <br>
-        <br>
-        <div class = "Testimonial" id = "Testimonial">
-            <h1 class = "Testimonial-heading"><i class="fa fa-quote-left" aria-hidden="true"></i></h1>
-            <h1 class = "Testimonial-heading">Testimonials</h1>
-            <br> 
-            <div class = "row">
-                <div class="col-md-4" style = "padding: 0;">
-                    <div class="personInfo">
-                        <div class="img">
-                            <img src="\images\skj.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
-                        </div>
-                        <div class="quote"> "Our students have been organising the technical summit Amalthea that has grown way beyond our expectations" </div>
-                        <div class="name">
-                                <hr>
-                                <b>Dr. Sudhir K. Jain<br> Director, IIT Gandhinagar</b><br><br>  <br>   
-                        </div>
-                    </div>                                      
-                </div>
-                <div class="col-md-4" style = "padding: 0;">
-                    <div class="personInfo" >
-                        <div class="img">
-                            <img src="\images\namo.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
-                        </div>
-                        <div class="quote"> "I'm very much impressed with the hard work of the students and the theme of this Technical Summit" </div>
-                        <div class="name">
-                                <hr>
-                                <b>Shri Narendra Modi <br> Honorable Prime Minister</b><br><br><br>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" style = "padding: 0;">
-                    <div class="personInfo">
-                        <div class="img">
-                            <img src="\images\anbha.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
-                        </div>
-                        <div class="quote"> "The students were very cooperative and showed wonderful hospitality and team work" </div>
-                        <div class="name">
-                                <hr>
-                                <b>Dr. Anil Bhardwaj<br> Director of Space Physics Laboratory, ISRO, Thiruvananthapuram, India</b><br><br>
-                        </div>
-                    </div>                                    
-                </div>
-            </div>
-        </div>
-
-        <!--Footer-->
-        <br>
-        <div class = "h-line"></div>
-        <footer>
-            <div class = "Footer">
-                <div class = "row" id = "Contact">
-                    <div class = "col-lg-4 col-md-4 col-sm-12" id = "Social">
-                        <h2 class = "Footer-text">Amalthea 2020</h3>
-                        <ul class="social-network social-circle">
-                            <li><a href="https://www.facebook.com/amalthea.iitgn/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/amalthea-iit-gandhinagar/?originalSubdomain=in" class="icoLinkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="https://www.youtube.com/user/AmaltheaIITGn" class="icoYoutube" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
-                            <li><a href="https://www.instagram.com/amalthea_iitgn/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="https://twitter.com/amalthea_iitgn?lang=en" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                        </ul>				
-                    </div>
-                    <div class = "col-lg-4 col-md-4 col-sm-12" id = "Email">                            
-                        <a href = "" class = "Email" target = "_blank"><i class="far fa-envelope fa-2x"></i></a>
-                        <a href = "" class = "Email-text" target = "_blank">&nbsp;amalthea@iitgn.ac.in</a>
-                    </div>
-                    <div class = "col-lg-4 col-md-4 col-sm-12" id = "App">
-                        <a href = "" class = "Phone" target = "_blank"><i class="fas fa-mobile-alt fa-2x"></i></a>
-                        <a href = "" class = "Phone-text" target = "_blank">&nbsp;Download our app</a>
-                    </div>
-                </div>    
-                <br>
-                <br>            
-            </div>
-        </footer>
-
-        <!-- JavaScript-->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148907672-1"></script>
-        <script src="\js\custom.js"></script>
+    <!--Theme-->
+    <div class="Theme">
+      <br>
+      <div class="loopingvideo">
+        <video id="myVideo" muted autoplay>
+          <source src="main-start.mp4" id="mp4Source" type="video/mp4">
+        </video>
+      </div>
+      <div class="Theme-Text">
+        <h1 class="aml2020-text">AMALTHEA 2020</h1>
+        <h1>connect.</h1>
+        <h1>collaborate.</h1>
+        <h1>create.</h1>
+      </div>
     </div>
+    <div class="h-line"></div>
+
+    <!--About Theme-->
+    <br><br>
+    <div class="About">
+      <h1 class="About-heading">Our Theme</h1>
+      <div class="row">
+        <div class="col-12 About-text">We have witnessed exponential growth in the development of technology and its applications in the past few decades. This development has surpassed the human imagination. Currently, we are in the midst of a
+          pandemic which has engulfed the entire world and led to countless deaths. In this time of pandemic, we are forced to stay apart. We all are locked at our homes without our friends. The theme "Connect Collaborate Create" is brought up with
+          an idea to connect our hearts, collaborate our efforts and create an unprecedented Amalthea amidst this pandemic.</div>
+        <!--<div class = "col-md-4 About-video"></div>-->
+      </div>
+    </div>
+
+    <!--Events-->
+    <div id="Eventssection"></div>
+    <br>
+    <br>
+    <div class="Events" id="Events">
+      <h1 class="Event-heading">Events</h1>
+      <div class="Event-text">Amalthea events are a platform for minds across the nation to showcase their talents in a wide variety of fields. Whether one is looking to add something to their skill set, an amateur wanting to brush up his art, or an
+        expert looking to test his skills against the brightest minds of the nation, our events serve them all. Amalthea has a rich tradtion of events which recieve international participation. In this edition, Amalthea events are going to held
+        completely online.</div>
+      <br>
+      <!--Row 1-->
+      <div class="row">
+        <% for(var i = 0; i<events.length; i++){ %>
+        <!--CryptoRush-->
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="eventbox">
+            <img src="<%=events[i][2] %>" class="event-image" alt="">
+            <div>
+              <%=events[i][1] %><br>
+              <a href="<%=events[i][3] %>" target="_blank" class="">Know more</a>
+              <br>
+            </div>
+          </div>
+        </div>
+        <% } %>
+
+      </div>
+      <br>
+      <!--<div class = "vl"></div>-->
+    </div>
+
+    <!--Webinars-->
+    <div id="Webinarsection"></div>
+    <br>
+    <div class="Webinar" id="Webinar">
+      <h1 class="Webinar-heading">Webinars</h1>
+      <div class="Webinar-text">
+        Since its inception 11 years ago, the Conclave has been one of the pillars of Amalthea. This year, Conclave talks will be organized virtually in form of Webinars. The Webinars aim to spread ideas, foster innovation, inquisition and creativity
+        among the masses. They will be organised on a range of techno-managerial fields, current affairs, cutting-edge high impact research and entrepreneurship.
+        The Webinars will host speakers, visionaries, and leaders who will spread knowledge, provide insights, and discuss solutions. The talks will also facilitate interaction between audiences all over the country and the eminent speakers. Thus,
+        going by this year’s theme, the Webinars will serve as a means to “Connect, Collaborate, and Create” for participants. 
+      </div>
+    </div>
+
+    <!--Instagram Feed-->
+    <br>
+    <br>
+    <div class="Insta" id="Insta">
+      <h1 class="Insta-heading"><i class="fa fa-instagram"></i></h1>
+      <h1 class="Insta-heading">Amalthea on Instagram</h1>
+      <br>
+      <!-- Place <div> tag where you want the feed to appear -->
+      <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+      <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
+      <script type="text/javascript">
+        /* curator-feed-default-feed-layout */
+        (function() {
+          var i, e, d = document,
+            s = "script";
+          i = d.createElement("script");
+          i.async = 1;
+          i.src = "https://cdn.curator.io/published/63246bee-fb2e-471a-9504-368cd9fc50d1.js";
+          e = d.getElementsByTagName(s)[0];
+          e.parentNode.insertBefore(i, e);
+        })();
+      </script>
+    </div>
+
+    <!--Testimonial-->
+    <br>
+    <br>
+    <div class="Testimonial" id="Testimonial">
+      <h1 class="Testimonial-heading"><i class="fa fa-quote-left" aria-hidden="true"></i></h1>
+      <h1 class="Testimonial-heading">Testimonials</h1>
+      <br>
+      <div class="row">
+        <div class="col-md-4" style="padding: 0;">
+          <div class="personInfo">
+            <div class="img">
+              <img src="\images\skj.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
+            </div>
+            <div class="quote"> "Our students have been organising the technical summit Amalthea that has grown way beyond our expectations" </div>
+            <div class="name">
+              <hr>
+              <b>Dr. Sudhir K. Jain<br> Director, IIT Gandhinagar</b><br><br> <br>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="padding: 0;">
+          <div class="personInfo">
+            <div class="img">
+              <img src="\images\namo.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
+            </div>
+            <div class="quote"> "I'm very much impressed with the hard work of the students and the theme of this Technical Summit" </div>
+            <div class="name">
+              <hr>
+              <b>Shri Narendra Modi <br> Honorable Prime Minister</b><br><br><br>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4" style="padding: 0;">
+          <div class="personInfo">
+            <div class="img">
+              <img src="\images\anbha.jpg" class="img-fluid mx-auto d-block rounded-circle cara-img">
+            </div>
+            <div class="quote"> "The students were very cooperative and showed wonderful hospitality and team work" </div>
+            <div class="name">
+              <hr>
+              <b>Dr. Anil Bhardwaj<br> Director of Space Physics Laboratory, ISRO, Thiruvananthapuram, India</b><br><br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <br>
+    <div class="h-line"></div>
+    <footer>
+      <div class="Footer">
+        <div class="row" id="Contact">
+          <div class="col-lg-4 col-md-4 col-sm-12" id="Social">
+            <h2 class="Footer-text">Amalthea 2020</h3>
+              <ul class="social-network social-circle">
+                <li><a href="https://www.facebook.com/amalthea.iitgn/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/amalthea-iit-gandhinagar/?originalSubdomain=in" class="icoLinkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.youtube.com/user/AmaltheaIITGn" class="icoYoutube" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.instagram.com/amalthea_iitgn/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="https://twitter.com/amalthea_iitgn?lang=en" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+              </ul>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12" id="Email">
+            <a href="" class="Email" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
+            <a href="" class="Email-text" target="_blank">&nbsp;amalthea@iitgn.ac.in</a>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-12" id="App">
+            <a href="" class="Phone" target="_blank"><i class="fas fa-mobile-alt fa-2x"></i></a>
+            <a href="" class="Phone-text" target="_blank">&nbsp;Download our app</a>
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+    </footer>
+
+    <!-- JavaScript-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148907672-1"></script>
+    <script src="\js\custom.js"></script>
+  </div>
 </body>
+
 </html>

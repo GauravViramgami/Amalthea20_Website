@@ -1,3 +1,41 @@
+header {
+  position: fixed;
+  padding: 3%;
+  z-index: 1000;
+}
+
+.nav-col {
+  margin: 10px;
+}
+
+.nav-btn {
+  width: 120px;
+  border-radius: 30px;
+  background-color: #00bcd4;
+  font-weight: bold;
+}
+
+.img-btn {
+  width: 50px;
+  padding: 5px;
+  border-radius: 100%;
+  background-color: #726a95;
+}
+
+#hor-nav{
+  position: relative;
+  width: 80px;
+  height: 60px;
+  transition-property: all;
+  transition-duration: 0.8s;
+  overflow: hidden;
+}
+
+nav div:hover #hor-nav{
+  width: 120%;
+  height: 80%;
+}
+
 html, body, .site{
     margin: 0 !important;
     padding: 0 !important;
@@ -48,7 +86,7 @@ div.Spacing{
 ::-webkit-scrollbar {
     width: 5px;
 }
-  
+
 ::-webkit-scrollbar-track-piece{
     background-color:transparent;
 }
@@ -59,7 +97,7 @@ div.Spacing{
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background:#3E435E; 
+    background:#3E435E;
 }
 
 /*Theme*/
@@ -193,7 +231,7 @@ div.Webinar-text{
     font-family: 'Roboto', sans-serif;
     font-weight: normal;
     font-size: 16px;
-    color: #0c0f12; 
+    color: #0c0f12;
 }
 
 /*Instagram Feed*/
@@ -227,21 +265,21 @@ h1.Testimonial-heading{
 }
 
 .personInfo {
-    padding:25px 10px !important;    
+    padding:25px 10px !important;
     color:#000;
     background: #FFF !important;
-    border:1px solid #0d98ba; 
+    border:1px solid #0d98ba;
     text-align: center;
     margin:0px 3px;
     font-size:12pt;
   }
-  
+
 .personInfo .quote {
-    margin-top:4vh;   
+    margin-top:4vh;
 }
 
 .personInfo .name {
-    margin-top:4vh;   
+    margin-top:4vh;
 }
 
 .testimonials {
@@ -261,7 +299,7 @@ h1.Testimonial-heading{
     width: 10vh;
     margin-left:50%;
     margin-top:5px;
-    background:#454B69; 
+    background:#454B69;
     height: 5px;
 }
 
