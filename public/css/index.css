@@ -73,8 +73,9 @@ nav.navbar {
 }
 
 .img-btn {
-  width: 40px;
-  padding: 5px;
+  width: 65px;
+  margin-left: -18px;
+  margin-top: -10px;
   border-radius: 100%;
 }
 
@@ -84,7 +85,7 @@ nav.navbar {
   width: 80px;
   height: 55px;
   transition-property: width;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
   overflow: hidden;
   /*background: rgb(2,0,36);
   background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);*/
