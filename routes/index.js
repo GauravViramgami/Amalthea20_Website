@@ -5,19 +5,52 @@ var passport = require("passport")
 var user = require("../modules/user")
 
 router.get("/", function (req, res) {
-  request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
+  // request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
 
-  var events = body.split("&&&&***&&&&");
+  // var events = body.split("&&&&***&&&&");
 
-    for(var i=0; i<events.length; i++)
-    {
-      events[i]=events[i].split("&&&**&&&");
-    }
-    // res.send(events)
-    res.render("index",{events:events})
-  })
+  //   for(var i=0; i<events.length; i++)
+  //   {
+  //     events[i]=events[i].split("&&&**&&&");
+  //   }
+  //   // res.send(events)
+  //   res.render("index",{events:events})
+  // })
+
+  res.render("index")
   
 })
+
+router.get("/events", function (req, res) {
+
+  res.render("events")
+  
+})
+
+router.get("/contact", function (req, res) {
+
+  res.render("contact")
+  
+})
+
+router.get("/amalthea_project", function (req, res) {
+
+  res.render("amalthea_project")
+  
+})
+
+router.get("/past_sites", function (req, res) {
+
+  res.render("past_sites")
+  
+})
+
+router.get("/webinars", function (req, res) {
+
+  res.render("webinars")
+  
+})
+
 
 router.get('/auth/google',
   passport.authenticate('google', {
@@ -29,7 +62,7 @@ router.get('/auth/google/secrets',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/Dashboard');
+    res.redirect('/');
   });
 
 router.get("/logout",function(req,res){
@@ -37,7 +70,7 @@ router.get("/logout",function(req,res){
     res.redirect("/")
 })
 
-router.get("/Dashboard",isLogedIn, function(req,res){
+router.get("/dashboard",isLogedIn, function(req,res){
   var register=[];
   request("https://script.google.com/macros/s/AKfycbw9eMmloCk_QMNosdqDJ3iPbTrR57W_fQFZPE6nsjnvUGkbNRk/exec", function(err, response, body){
 

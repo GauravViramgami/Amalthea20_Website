@@ -1,55 +1,65 @@
-<!DOCTYPE html>
-<html lang = "en">
-<head>
-    <!--Mostly from Amathea 19 website but with updated contents and slight modifications here and there-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Amalthea 2020</title>
-    <meta name = "author" content = "Reuben Devanesan">
-    <meta name = "description" value = "Annual Tech Summit of IIT Gandhinagar">
-    <link rel = "icon" href = "images\aml_icon.png">
-    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-	<link rel = "stylesheet" href = "css\custom.css">
-	<link rel = "stylesheet" href = "css\dashboard.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-</head>
+
 
 <body>
-    <!-- Navbar-->
-    <header>
-        <nav class = "navbar navbar-expand-lg fixed-top navbar-dark">
-            <a class="navbar-brand" href="/">Home</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>        
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav ml-auto mr-5 mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Webinar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                    <% if (!currentUser){ %>
-						<li class="nav-item ">
-						    <a class="nav-link" href="/auth/google">Login with Google</a>
-						</li>
-					<% } else{ %>
-						<li class="nav-item">
-                            <a class="nav-link" href="/Dashboard">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
-					<% } %>	
-                </ul>
+  <div class="site">
+    <!--Done for responsivesness cause a mobile ignores the css for the body tags-->
+    <!--Navbar-->
+    <header id="header" class="no-scroll">
+      <nav class="navbar navbar-expand fixed-top">
+        <div class="container-fluid">
+          <div id="hor-nav" class="row gradient">
+            <div class="col-lg-1 col-md-4 col-sm-12 nav-col img-col">
+              <input id="img-btn" class="img-btn btn" type="image" src="/images/logo_white.svg" name="" value="">
             </div>
-        </nav>
+            <div class="col-lg-1 col-md-4 col-sm-12 nav-col">
+              <a href="/" role="button" class="btn nav-btn">Home</a>
+            </div>
+            <div class="col-lg-1 col-md-4 col-sm-12 nav-col">
+              <a href="/events" role="button" class="btn nav-btn">Events</a>
+            </div>
+            <div class="col-lg-1 col-md-4 col-sm-12 nav-col">
+              <a href="/webinars" role="button" class="btn nav-btn">Webinars</a>
+            </div>
+            <div style="margin-right:0px;" class="col-lg-3 col-md-4 col-sm-12 nav-col">
+              <a href="/amalthea_project" role="button" class="btn nav-btn">Amalthea Project</a>
+            </div>
+            <div style="margin-left:0px; margin-right:0px;" class="col-lg-2 col-md-4 col-sm-12 nav-col">
+              <a href="/past_sites" role="button" class="btn nav-btn">Past Sites</a>
+            </div>
+            <div class="col-lg-1 col-md-4 col-sm-12 nav-col">
+              <a href="/contact" role="button" class="btn nav-btn">Contact</a>
+            </div>
+            <!-- <div class="col-lg-2 col-md-4 col-sm-12 nav-col">
+                            <button type="button" class="btn btn-primary nav-btn">Login</button>
+                            </div> -->
+          </div>
+        </div>
+        <div class="dropdown">
+          <a class="login" href="#">
+            <!-- <% if (currentUser){ %>
+
+                <h4>ahsdasd</h4>
+        <% } %>
+        <h4>ahsdasd</h4> -->
+            <span class="fa-stack">
+                <!-- <h4>ahsdasd</h4> -->
+              <i class="fas fa-user"></i>
+              <i class="fas fa-caret-down"></i>
+            </span>
+          </a>
+          <div class="dropdown-content">
+            <!-- <a href="#">Log in</a> -->
+            <% if (!currentUser){ %>
+                    <!-- <a href="/auth/google">Login with Google</a> -->
+                    <a href="/auth/google">Log in</a>
+            <% } else{ %>
+                <!-- <a  href="#">Login as:</a>
+                <a  href="#"><%= currentUser.email %></a> -->
+                    <a class="dashboard-btn" href="/Dashboard">Dashboard</a>
+                    <a href="/logout">Logout</a>
+
+            <% } %>
+          </div>
+        </div>
+      </nav>
     </header>
