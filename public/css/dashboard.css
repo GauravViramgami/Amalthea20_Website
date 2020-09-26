@@ -50,6 +50,7 @@ div.update-spacing{
   font-weight: 400;
   margin-top: auto;
   margin-bottom: auto;
+  word-wrap: break-word;
 }
 
 /*Events*/
