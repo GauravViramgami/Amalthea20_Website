@@ -66,6 +66,12 @@ div.event-name{
   font-weight: 500;
 }
 
+@media only screen and (max-width: 777px) {
+  div.event-name {
+    margin-left: 3vw;
+  }
+}
+
 div.event-time{
   margin-right: 1vw;
   float: right;
