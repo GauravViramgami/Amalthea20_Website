@@ -236,6 +236,28 @@ header {
   z-index: 2;
 }
 
+.projects {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.past-sites {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .projects {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .past-sites {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+
 .fa-stack {
   border-radius: 15px;
   padding-bottom: 10px;
@@ -928,9 +950,6 @@ ul.mail li {
 }
 
 @media only screen and (max-width: 777px) {
-  .theme {
-    overflow-x: hidden !important;
-  }
 
   .bottom-left {
     margin-top: 2px;
@@ -942,7 +961,7 @@ ul.mail li {
   .bottom-left-2 {
     margin-top: 0;
     position: relative;
-    left: 10vw;
+    left: 18vw;
     right: 0;
     color: black;
   }
