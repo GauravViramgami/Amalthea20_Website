@@ -6,6 +6,7 @@ html {
   text-align: justify;
   scroll-behavior: smooth;
   line-height: 1.8rem;
+  overflow-x: hidden;
 }
 
 body {

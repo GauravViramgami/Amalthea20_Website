@@ -6,6 +6,7 @@ html {
   text-align: justify;
   scroll-behavior: smooth;
   line-height: 1.8rem;
+  overflow-x: hidden;
 }
 
 body,
@@ -383,7 +384,6 @@ nav.navbar {
   width: 0;
 }
 
-
 .scroll .nav-btn:after,
 .scroll .dropdown-content a:after {
   background: white;
@@ -533,7 +533,6 @@ div.Theme-Text h1.aml2020-text {
   transform: translate3d(0, 0, 0);
 }
 
-
 .web {
   background-color: #ECF4FF;
   z-index: 5000;
@@ -554,7 +553,7 @@ div.Theme-Text h1.aml2020-text {
     height: 0;
   }
 
-  .no_pointer_events{
+  .no_pointer_events {
     height: 300px;
   }
 }
@@ -929,8 +928,8 @@ ul.mail li {
 }
 
 @media only screen and (max-width: 777px) {
-  body {
-    overflow-x: hidden !important;
+  .theme {
+    overflow-x: hidden;
   }
 
   .bottom-left {
@@ -1013,7 +1012,6 @@ ul.mail li {
     height: 50vh;
   }
 }
-
 
 .web {
   background-color: #ECF4FF;
