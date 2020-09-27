@@ -52,12 +52,8 @@ p {
   margin-left: 14%;
 }
 
-
-@media only screen and (max-width: 777px) {
-  .hr-line {
-    margin-top: 35px;
-    margin-bottom: auto;
-  }
+#logo1, #logo2 {
+  display: none;
 }
 
 #logo2 path:nth-child(1) {
