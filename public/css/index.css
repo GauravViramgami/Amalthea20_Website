@@ -627,7 +627,11 @@ div.box1 {
 
 @media only screen and (max-width: 777px) {
   .text {
-    padding-left: 1%;
+    display: none;
+  }
+
+  .hr-line {
+    display: none;
   }
 
   .text-box {
