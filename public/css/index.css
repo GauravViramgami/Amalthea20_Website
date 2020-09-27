@@ -930,11 +930,6 @@ ul.mail li {
 }
 
 @media only screen and (max-width: 777px) {
-
-  body {
-    overflow-x: hidden !important;
-  }
-
   .bottom-left {
     margin-top: 2px;
     position: relative;
