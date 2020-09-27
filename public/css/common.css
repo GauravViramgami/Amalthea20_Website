@@ -377,6 +377,7 @@ ul.social-network li, ul.mail li {
 }
 
 @media only screen and (max-width: 777px) {
+
   body {
     overflow-x: hidden !important;
   }
@@ -396,13 +397,6 @@ ul.social-network li, ul.mail li {
     color: black;
   }
 
-  .bottom-right {
-    margin-top: 10px;
-    position: relative;
-    left: 35vw;
-    right: 0;
-  }
-
   .bottom-right .hr-phone {
     position: relative;
     height: 2px;
@@ -410,6 +404,13 @@ ul.social-network li, ul.mail li {
     width: 15%;
     left: 6vw;
     margin-top: 5px;
+  }
+
+  .bottom-right {
+    margin-top: 20px;
+    position: relative;
+    left: 35vw;
+    right: 0;
   }
 
   .bottom-right-2 {
