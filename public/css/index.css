@@ -951,6 +951,10 @@ ul.mail li {
 
 @media only screen and (max-width: 777px) {
 
+  /* .footer {
+    justify-content: center;
+  } */
+
   .bottom-left {
     margin-top: 2px;
     position: relative;
@@ -961,7 +965,7 @@ ul.mail li {
   .bottom-left-2 {
     margin-top: 0;
     position: relative;
-    left: 18vw;
+    left: 20%;
     right: 0;
     color: black;
   }
