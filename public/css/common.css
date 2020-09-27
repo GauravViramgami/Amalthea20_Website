@@ -403,6 +403,15 @@ ul.social-network li, ul.mail li {
     right: 0;
   }
 
+  .bottom-right .hr-phone {
+    position: relative;
+    height: 2px;
+    background: white;
+    width: 15%;
+    left: 6vw;
+    margin-top: 5px;
+  }
+
   .bottom-right-2 {
     margin-top: 2px;
     margin-right: 50px;
