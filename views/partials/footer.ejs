@@ -1,47 +1,57 @@
-<!--Footer-->
-<div class="footer">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#000b76" fill-opacity="1"
-        d="M0,32L30,48C60,64,120,96,180,122.7C240,149,300,171,360,154.7C420,139,480,85,540,90.7C600,96,660,160,720,154.7C780,149,840,75,900,53.3C960,32,1020,64,1080,85.3C1140,107,1200,117,1260,101.3C1320,85,1380,43,1410,21.3L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
-      </path>
-    </svg>
-    <div class="white">
-      <div class="bottom-left">
-        Follow us on
+<!-- Footer -->
+<div class="footer" id="footer">
+        <!-- <svg class="footer-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#000b76" fill-opacity="1"
+            d="M0,32L30,48C60,64,120,96,180,122.7C240,149,300,171,360,154.7C420,139,480,85,540,90.7C600,96,660,160,720,154.7C780,149,840,75,900,53.3C960,32,1020,64,1080,85.3C1140,107,1200,117,1260,101.3C1320,85,1380,43,1410,21.3L1440,0L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+          </path>
+        </svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path fill="#132b63" fill-opacity="1"
+            d="M0,256L30,250.7C60,245,120,235,180,224C240,213,300,203,360,213.3C420,224,480,256,540,250.7C600,245,660,203,720,181.3C780,160,840,160,900,181.3C960,203,1020,245,1080,245.3C1140,245,1200,203,1260,202.7C1320,203,1380,245,1410,266.7L1440,288L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+          </path>
+        </svg>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 bottom-left-2" id="Social">
-        <ul class="social-network social-circle">
-          <li><a href="https://www.facebook.com/amalthea.iitgn/" class="icoFacebook" title="Facebook"
-              target="_blank"><i class="fa fa-facebook"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/amalthea-iit-gandhinagar/?originalSubdomain=in"
-              class="icoLinkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-          <li><a href="https://www.youtube.com/user/AmaltheaIITGn" class="icoYoutube" title="Youtube"
-              target="_blank"><i class="fa fa-youtube"></i></a></li>
-          <li><a href="https://www.instagram.com/amalthea_iitgn/" class="icoInstagram" title="Instagram"
-              target="_blank"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="https://twitter.com/amalthea_iitgn?lang=en" class="icoTwitter" title="Twitter"
-              target="_blank"><i class="fa fa-twitter"></i></a></li>
-        </ul>
+      <div class="row footer-row">
+        <div class="col-lg-12 footer-col">
+          <h3 class="footer-text">Subscribe For Updates</h3>
+          <br>
+        </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-3 footer-col margin-left"> <input name="name" id="name" type="text" class="form-control box-input" placeholder="Name" required> </div>
+        <div class="form-group col-sm-12 col-md-6 col-lg-3 footer-col"><input type="email" name="email" id="email" class="form-control box-input" placeholder="Email ID" required></div>
+        <div class="form-group submit col-sm-12 col-md-12 col-lg-3 footer-col"> <button type="submit" id="btnsbt" onclick="submitForm()" class="btn btn-info"> Subscribe <i class="fas fa-paper-plane"></i></button> </div>
+        <div class="col-sm-12 col-md-12 col-lg-1 footer-col" id="loader">
+          <div class="loader-wheel">
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 footer-col padding-top">
+          <h5 class="footer-text">Follow us on</h5>
+          <div class="" id="Social">
+            <ul class="social-network social-circle">
+              <li><a href="https://www.facebook.com/amalthea.iitgn/" class="icoFacebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/amalthea-iit-gandhinagar/?originalSubdomain=in" class="icoLinkedin" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+              <li><a href="https://www.youtube.com/user/AmaltheaIITGn" class="icoYoutube" title="Youtube" target="_blank"><i class="fa fa-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/amalthea_iitgn/" class="icoInstagram" title="Instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="https://twitter.com/amalthea_iitgn?lang=en" class="icoTwitter" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+          <br>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-6 footer-col padding-top">
+          <h5 class="footer-text">Amalthea '20</h5>
+          <h5 class="footer-text">Indian Institute of Technology Gandhinagar</h5>
+          <div class="" id="Social">
+            <ul class="social-network social-circle">
+              <li><a href="mailto:amalthea@iitgn.ac.in" class="email" target="_blank"><i class="fa fa-envelope"></i></a></li>
+              <!-- <li> <a href="" class="phone" target="_blank"><i class="fa fa-mobile-alt"></i></a></li> -->
+            </ul>
+          </div>
+          <br>
+        </div>
       </div>
-      <div class="bottom-right">
-        <div class="hr-phone"></div>
-        Amalthea '20
-        <div class="hr-phone"></div>
-      </div>
-      <div class="bottom-right-2">
-        Indian Institute of Technology Gandhinagar
-      </div>
-      <div class="col-lg-4 col-md-4 col-sm-12 bottom-right-3" id="Social">
-        <ul class="social-network social-circle">
-          <li><a href="" class="email" target="_blank"><i class="fa fa-envelope"></i></a></li>
-          <li> <a href="" class="phone" target="_blank"><i class="fa fa-mobile-alt"></i></a></li>
-        </ul>
-      </div>
+      <div id="snackbar"></div>
     </div>
+
   </div>
-</div>
-
-</div>
 
 
-</div>
+  </div>

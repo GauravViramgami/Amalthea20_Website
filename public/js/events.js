@@ -1,3 +1,5 @@
+$('.img-col input').attr('src', '/images/logo.svg');
+
 var slideIndex = [1];
 var slideId = ["mySlides1", "mySlides2"]
 showSlides(1);
@@ -72,21 +74,43 @@ function carousel() {
 }
 */
 
-//Navbar
-var i = 0;
-document.getElementById("img-btn").onclick = function() {
-    i++;
-    if (i % 2 != 0) {
-        var nav = document.getElementById("hor-nav");
-        nav.style.width = "100%";
-        var width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        if (width < 900) {
-          nav.style.height = "80%";
-        }
+var myNav = document.getElementById('header');
+window.onscroll = function() {
+  "use strict";
+
+  var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  if (width < 777) {
+    var nav = document.getElementById("hor-nav");
+    if (nav.style.height < 70) {
+      if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200) {
+        $('.img-col input').attr('src', '/images/logo_white.svg');
+        myNav.classList.add("scroll");
+        myNav.classList.remove("no-scroll");
+      } else {
+        $('.img-col input').attr('src', '/images/logo.svg');
+        myNav.classList.add("no-scroll");
+        myNav.classList.remove("scroll");
+      }
+    } else {
+      if (document.body.scrollTop >= 60 || document.documentElement.scrollTop >= 60) {
+        $('.img-col input').attr('src', '/images/logo_white.svg');
+        myNav.classList.add("scroll");
+        myNav.classList.remove("no-scroll");
+      } else {
+        $('.img-col input').attr('src', '/images/logo.svg');
+        myNav.classList.add("no-scroll");
+        myNav.classList.remove("scroll");
+      }
     }
-    else {
-        var nav = document.getElementById("hor-nav");
-        nav.style.width = "80px";
-        nav.style.height = "60px";
+  } else {
+    if (document.body.scrollTop >= 800 || document.documentElement.scrollTop >= 800) {
+      $('.img-col input').attr('src', '/images/logo_white.svg');
+      myNav.classList.add("scroll");
+      myNav.classList.remove("no-scroll");
+    } else {
+      $('.img-col input').attr('src', '/images/logo.svg');
+      myNav.classList.add("no-scroll");
+      myNav.classList.remove("scroll");
     }
-}
+  }
+};

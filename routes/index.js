@@ -18,37 +18,50 @@ router.get("/", function (req, res) {
   // })
 
   res.render("index")
-  
+
 })
 
 router.get("/events", function (req, res) {
 
   res.render("events")
-  
+
 })
 
 router.get("/contact", function (req, res) {
 
   res.render("contact")
-  
+
 })
 
 router.get("/amalthea_project", function (req, res) {
 
   res.render("amalthea_project")
-  
+
 })
 
 router.get("/past_sites", function (req, res) {
 
   res.render("past_sites")
-  
+
 })
 
 router.get("/webinars", function (req, res) {
 
   res.render("webinars")
-  
+
+})
+
+router.get("/webinar_form", function (req, res) {
+
+  res.render("webinar_form")
+
+})
+
+
+router.get("/sponsors", function (req, res) {
+
+  res.render("sponsors")
+
 })
 
 
@@ -84,30 +97,30 @@ router.get("/dashboard",isLogedIn, function(req,res){
     for(var i=0; i<events.length; i++)
     {
       if (events[i][4]!="-"){
-        
+
         request(events[i][4], function(err, response2, body2){
           var members = body2.split("&&&&***&&&&")
-          
+
           for(var j=0; j<members.length; j++)
           {
             members[j]=members[j].split("&&&**&&&");
-            
+
             if(members[j][0]==req.user.email)
             {
-              
+
               register.push(members[j][6])
-              
+
               break
-            }            
-          }         
+            }
+          }
           // res.send(register)
           var data=[]
           var nameOfEvents=[]
           for(var i=0; i<events.length; i++)
           {
             nameOfEvents.push(events[i][0])
-            
-            
+
+
           }
           for(var j=0; j<register.length; j++)
           {
@@ -116,8 +129,8 @@ router.get("/dashboard",isLogedIn, function(req,res){
           // res.send(data)
           res.render("dashboard",{data:data})
       })
-     
-      
+
+
 
     }
   }

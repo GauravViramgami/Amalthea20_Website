@@ -1,3 +1,10 @@
+/* Modal */
+.modal-title {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+}
+
 /*Box*/
 div.box1 {
   padding: 25px;
@@ -8,28 +15,76 @@ div.box1 {
   border-radius: 15px;
 }
 
-h1.box-heading {
-  /*font-family: 'Inter', sans-serif;*/
-  font-size: 35px;
-  font-weight: bold;
+h1.box-heading1 {
   color: #454B69;
-  letter-spacing: -1px;
+  font-weight: 750;
 }
 
 div.box-text {
   margin-top: 4px;
-  /*font-family: 'Inter', sans-serif;*/
   font-weight: normal;
   font-size: 16px;
   color: #0c0f12;
 }
 
+/*Webinar boxes*/
+div.webinar-box1 {
+  padding: 25px;
+  box-shadow: 0px 5px 5px rgba(0, 100, 255, 0.1);
+  background: #fff;
+  border-radius: 15px;
+}
+
+.logo-top {
+  padding-left: 8%;
+  padding-top: 4%;
+}
+
+div.webinarsboxes{
+  margin-left: 8vw;
+  margin-right: 8vw;
+}
+
+@media only screen and (max-width: 666px) {
+  div.img{
+    width: 73vw;
+  }
+
+  div.webinarsboxes{
+    margin-left: 8vw;
+    margin-right: 8vw !important;
+  }
+
+  div.webinar-box1 {
+    padding: 6vw;
+    width: 85vw;
+  }
+}
+
+.btn-right {
+  margin-left: 10px;
+}
+
 div.update-spacing{
-  height: 30vh;
+  height: 10vh;
 }
 
 @media only screen and (max-width: 777px) {
   div.update-spacing{
     height: 50vh;
   }
+}
+
+.border-right {
+  border-right: 1px;
+}
+
+.register-btn {
+  background-color: #132b63;
+  border-color: #132b63;
+}
+
+.register-btn:hover {
+  background-color: #7600ff !important;
+  border-color: #7600ff !important;
 }

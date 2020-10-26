@@ -3,6 +3,12 @@
 // for (let i = 0; i < logo.length; i++) {
 //   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 // }
+
+// var video = document.getElementById("theme-video");
+// video.muted = !video.muted;
+// video.play();
+
+$('.img-col input').attr('src', '/images/logo.svg');
 document.getElementById("logo1").style.display = "none";
 document.getElementById("logo2").style.display = "none";
 // document.querySelector("svg").onload = function() {
@@ -16,28 +22,8 @@ if (width < 777) {
 }
 
 // }
-//Navbar
-var i = 0;
-document.getElementById("img-btn").onclick = function() {
-  i++;
-  if (i % 2 != 0) {
-    var nav = document.getElementById("hor-nav");
-    nav.style.width = "100%";
-    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (width < 900) {
-      nav.style.height = "80%";
-    }
-  } else {
-    var nav = document.getElementById("hor-nav");
-    nav.style.width = "80px";
-    nav.style.height = "60px";
-  }
-}
 
 var myNav = document.getElementById('header');
-document.getElementById('img-btn').src = '/images/logo.svg';
-myNav.classList.add("no-scroll");
-myNav.classList.remove("scroll");
 window.onscroll = function() {
   "use strict";
 
