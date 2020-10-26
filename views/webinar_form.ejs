@@ -107,16 +107,12 @@
     function validateCode(ref) {
       var c = ref.toString().toUpperCase().replace(/\s/g, "");
       var l = c.length;
-      if (l >= 9) {
-        return c;
-      } else if (l === 8) {
-        return "AML20-0" + c.substring(6,8);
-      } else if (l === 7) {
-        return "AML20-00" + c.substring(6,7);
+      if (l === 1) {
+        return "AML20-00" + c;
       } else if (l === 2) {
         return "AML20-0" + c;
-      } else if (l === 1) {
-        return "AML20-00" + c;
+      } else if (l === 3) {
+        return "AML20-" + c;
       } else {
         return c;
       }
