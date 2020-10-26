@@ -52,8 +52,11 @@ router.get("/webinars", function (req, res) {
 })
 
 router.get("/webinar_form", function (req, res) {
-
-  res.render("webinar_form")
+  let ref = req.query.ref;
+  if (ref === undefined) {
+    ref = -1;
+  }
+  res.render("webinar_form", {ref: ref})
 
 })
 

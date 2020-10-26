@@ -95,6 +95,34 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script type="text/javascript">
 
+    var ref = <%= ref %> ;
+    if (ref != -1) {
+      var element = document.getElementById("referrel-code");
+      element.style.display  = "block";
+      //$('#referrel-code').style.display = "block";
+      $('#reference_').val('Campus Ambassador Program');
+      $('#referrel_code_').val(validateCode(ref));
+    }
+
+    function validateCode(ref) {
+      var c = ref.toString().toUpperCase().replace(/\s/g, "");
+      var l = c.length;
+      if (l >= 9) {
+        return c;
+      } else if (l === 8) {
+        return "AML20-0" + c.substring(6,8);
+      } else if (l === 7) {
+        return "AML20-00" + c.substring(6,7);
+      } else if (l === 2) {
+        return "AML20-0" + c;
+      } else if (l === 1) {
+        return "AML20-00" + c;
+      } else {
+        return c;
+      }
+    }
+
+
     function CheckCA(val) {
       var element = document.getElementById("referrel-code");
       if (val == "Campus Ambassador Program") {
