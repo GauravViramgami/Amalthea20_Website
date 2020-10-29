@@ -52,7 +52,7 @@
     </div>
     <div class="form-group"> <label> Organization/ Institution* </label> <input name="institute" id="institute_" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div>
 
-      <div class="form-group"> <label for="reference"> From where did you get to know? </label> <select id="reference_" name="reference" class="form-control">
+      <div class="form-group"> <label for="reference"> From where did you get to know? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value)">
           <option value="" disabled selected style="display: none">--Please select an option--</option>
           <option value="Social Media">Social Media</option>
           <option value="Campus Ambassador Program">Campus Ambassador Program</option>
@@ -60,7 +60,7 @@
           <option value="Peers">Peers</option>
           <option value="Others">Others</option>
         </select> </div>
-        <!-- <div class="form-group" id="referrel-code"> <label> Referrel Code </label> <input name="referrel_code" id="referrel_code_" class="form-control" placeholder="Referrel Code"> </div> -->
+      <div class="form-group" id="referrel-code"> <label> Referral Code </label> <input name="referrel_code" id="referrel_code_" class="form-control" placeholder="Referral Code"> </div>
       <!-- <div class="form-group col-md-6 "> <label for="year"> Graduating Year </label> <input type="number" name="year" id="year" min="2019" max="2026" class="form-control" placeholder="Ex: 2021" required> </div> -->
 
     <!-- <div class="form-row ">
@@ -112,9 +112,11 @@
   <script type="text/javascript">
 
     var ref = <%= ref %> ;
-    var referral_code = "";
     if (ref != -1) {
-      referral_code = validateCode(ref);
+      $('#reference_').val('Campus Ambassador Program');
+      var element = document.getElementById("referrel-code");
+      element.style.display = "block";
+      $('#referrel_code_').val(validateCode(ref));
     }
 
     function validateCode(ref) {
@@ -132,14 +134,14 @@
     }
 
 
-    // function CheckCA(val) {
-    //   var element = document.getElementById("referrel-code");
-    //   if (val == "Campus Ambassador Program") {
-    //     element.style.display = "block";
-    //   } else {
-    //     element.style.display = "none";
-    //   }
-    // }
+    function CheckCA(val) {
+      var element = document.getElementById("referrel-code");
+      if (val == "Campus Ambassador Program") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
 
     // var innerHTML = '<div><h2>REGISTER FOR THE WEBINAR</h2></div><hr><div class="registrationText"> Please fill the below form (All fields are mandatory) </div> <br><div class="form-row "><div class="form-group col-md-6"> <label> Full Name </label> <input name="fullname" id="fullname" type="text" class="form-control" placeholder="Full Name" required> </div><div class="form-group col-md-6 "> <label for="gender"> Gender </label> <select name="gender" id="gender" class="form-control" required><option value="" disabled selected style="display: none">--Please select an option--</option><option>Male</option><option>Female</option><option>Other</option></select> </div></div><div class="form-group"> <label> Institute Name & Address </label> <input name="institute" id="institute" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div><div class="form-row"><div class="form-group col-md-6 "> <label for="courseofstudy"> Program </label> <select id="courseofstudy" name="courseofstudy" class="form-control" required><option value="" disabled selected style="display: none">--Please select an option--</option><option value="Bachelors">Bachelors</option><option value="Masters">Masters</option><option value="Doctorate">Doctorate</option><option value="Other">Other</option></select> </div><div class="form-group col-md-6 "> <label for="year"> Graduating Year </label> <input type="number" name="year" id="year" min="2019" max="2026" class="form-control" placeholder="Ex: 2021" required> </div></div><div class="form-row "><div class="form-group col-md-6 "> <label for="email"> Mail ID </label><div class="input-group "> <input type="email" name="email" id="email" class="form-control" placeholder="Email" required> </div></div><div class="form-group col-md-6 "> <label for="contact_number"> Contact Number (WhatsApp) </label> <input type="text" name="contact_number" id="contact_number" class="form-control" pattern="[0-9]{10}" required> </div></div><br><br><div class="form-group submit"> <button type="submit" id="btnsbt" onclick="submitForm()" class="btn btn-info"> Submit </button> </div>';
     function _submitForm() {
@@ -148,7 +150,7 @@
       var email = $("#email_").val();
       var institute = $("#institute_").val();
       var reference = $("#reference_").val();
-      var referrel_code = referral_code;
+      var referrel_code = $("#referral_code_").val();
       var timestamp = new Date().toLocaleString();
       if (email === null || name === null || institute === null) {
         document.getElementById("loader_").style.display = "none";
@@ -194,7 +196,7 @@
             $("#email_").val('');
             $('#institute_').val('');
             $('#reference_').val('');
-            //$('#referrel_code_').val('');
+            $('#referrel_code_').val('');
           });
           //  var xmlhttp = new XMLHttpRequest();
           // xmlhttp.onreadystatechange = function() {
