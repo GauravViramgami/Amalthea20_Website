@@ -22,8 +22,11 @@ router.get("/", function (req, res) {
 })
 
 router.get("/events", function (req, res) {
-
-  res.render("events")
+  let event = req.query.event;
+  if (event != "cryptorush" && event != "dcode" && event != "icon" && event != "cryptix" && event != "quickwit") {
+    event = "cryptorush";
+  }
+  res.render("events", {event: event})
 
 })
 
