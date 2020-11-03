@@ -62,7 +62,7 @@
         </select> </div>
     </div>
 
-      <div class="form-group"> <label for="reference"> From where did you get to know about this webinar? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value);">
+      <div class="form-group" id="reference"> <label for="reference"> From where did you get to know about this webinar? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value);">
           <option value="" disabled selected style="display: none">--Please select an option--</option>
           <option value="Social Media">Social Media</option>
           <option value="Campus Ambassador Program">Campus Ambassador Program</option>
@@ -97,10 +97,10 @@
 
     var ref = <%= ref %> ;
     if (ref != -1) {
-      var element = document.getElementById("referrel-code");
-      element.style.display  = "block";
-      //$('#referrel-code').style.display = "block";
+      document.getElementById("reference").style.display = "none";
       $('#reference_').val('Campus Ambassador Program');
+      //var element = document.getElementById("referrel-code");
+      //element.style.display = "block";
       $('#referrel_code_').val(validateCode(ref));
     }
 
@@ -169,12 +169,14 @@
               error_show("Please provide valid Email Id!");
             } else {
               error_show("Your response has been recorded!!");
+              $('#reference_').val('');
+              $('#referrel_code_').val('');
               var jqxhr = $.ajax({
                 url: 'https://script.google.com/macros/s/AKfycbzhqcwEB2u83IcFrmEiJpnMc7i8ypW9Pl5LU5_unH4jMtxdaVs/exec',
                 method: "GET",
                 dataType: "json",
                 data: {
-                  Column: "2",
+                  Column: "8",
                   Referrel_code: referrel_code
                 }
               });
@@ -183,8 +185,6 @@
             $("#email_").val('');
             $('#institute_').val('');
             $('#professional_status_').val('');
-            $('#reference_').val('');
-            $('#referrel_code_').val('');
           });
           //  var xmlhttp = new XMLHttpRequest();
           // xmlhttp.onreadystatechange = function() {

@@ -69,7 +69,7 @@ router.get("/webinars", function (req, res) {
 
 })
 
-router.get("/webinar_form.html", function (req, res) {
+router.get("/webinar_form", function (req, res) {
   let ref = req.query.ref;
   if (ref === undefined) {
     ref = -1;

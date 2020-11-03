@@ -15,7 +15,7 @@ div.box1 {
   border-radius: 15px;
 }
 
-h1.box-heading1 {
+.box-heading1 {
   color: #454B69;
   font-weight: 750;
 }
@@ -25,6 +25,13 @@ div.box-text {
   font-weight: normal;
   font-size: 16px;
   color: #0c0f12;
+}
+
+.hr-webinar {
+  width: 20vw;
+  height: 2px;
+  background-color: #454B69;
+  margin-left: 0;
 }
 
 /*Webinar boxes*/
@@ -61,8 +68,12 @@ div.webinarsboxes{
   }
 }
 
-.btn-right {
-  margin-left: 10px;
+.btn {
+  margin-top: 5px;
+}
+
+.btn-left {
+  margin-right: 10px;
 }
 
 div.update-spacing{
