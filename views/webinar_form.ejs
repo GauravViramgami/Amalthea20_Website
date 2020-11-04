@@ -62,7 +62,7 @@
         </select> </div>
     </div>
 
-      <div class="form-group" id="reference"> <label for="reference"> From where did you get to know about this webinar? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value);">
+      <div class="form-group" id="reference"> <label for="reference"> From where did you get to know about this webinar? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value);" required>
           <option value="" disabled selected style="display: none">--Please select an option--</option>
           <option value="Social Media">Social Media</option>
           <option value="Campus Ambassador Program">Campus Ambassador Program</option>
@@ -138,12 +138,12 @@
       var reference = $("#reference_").val();
       var referrel_code = $("#referrel_code_").val();
       var timestamp = new Date().toLocaleString();
-      if (email === null || name === null || institute === null || professional_status === null) {
+      if (email === null || name === null || institute === null || professional_status === null || reference === null) {
         document.getElementById("loader_").style.display = "none";
         error_show("Please fill all the fields");
       } else {
 
-        if (email.trim() === "" || name.trim() === "" || institute.trim() === "" || professional_status.trim() === "") {
+        if (email.trim() === "" || name.trim() === "" || institute.trim() === "" || professional_status.trim() === "" || reference.trim() === "") {
           document.getElementById("loader_").style.display = "none";
           error_show("Please fill all the fields");
         } else {
@@ -169,8 +169,6 @@
               error_show("Please provide valid Email Id!");
             } else {
               error_show("Your response has been recorded!!");
-              $('#reference_').val('');
-              $('#referrel_code_').val('');
               var jqxhr = $.ajax({
                 url: 'https://script.google.com/macros/s/AKfycbzhqcwEB2u83IcFrmEiJpnMc7i8ypW9Pl5LU5_unH4jMtxdaVs/exec',
                 method: "GET",
