@@ -101,12 +101,16 @@ router.get('/auth/google/secrets',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function (req, res) {
     // Successful authentication, redirect home.
-    res.redirect('/');
+    res.redirect('/caLeaderboard');
   });
 
 router.get("/logout",function(req,res){
     req.logout()
     res.redirect("/")
+})
+
+router.get("/caLeaderboard", isLogedIn, function(req, res) {
+  res.render("caLeaderboard");
 })
 
 router.get("/dashboard",isLogedIn, function(req,res){
