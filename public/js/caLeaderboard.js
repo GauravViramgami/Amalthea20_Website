@@ -61,15 +61,5 @@ var jqxhr = $.ajax({
           myNav.classList.remove("scroll");
         }
       }
-    } else {
-      if (document.body.scrollTop >= 160 || document.documentElement.scrollTop >= 160) {
-        $('.img-col input').attr('src', '/images/logo.svg');
-        myNav.classList.add("scroll");
-        myNav.classList.remove("no-scroll");
-      } else {
-        $('.img-col input').attr('src', '/images/logo_white.svg');
-        myNav.classList.add("no-scroll");
-        myNav.classList.remove("scroll");
-      }
-    }
+    } 
   };
