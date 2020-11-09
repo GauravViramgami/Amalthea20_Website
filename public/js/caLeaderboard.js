@@ -32,3 +32,44 @@ var jqxhr = $.ajax({
     document.getElementById("heading").style.display = "block";
     document.getElementById("loaded").style.display = "block";
   });
+
+  var myNav = document.getElementById('header');
+  window.onscroll = function() {
+    "use strict";
+
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if (width < 777) {
+      var nav = document.getElementById("hor-nav");
+      if (nav.style.height < 70) {
+        if (document.body.scrollTop >= 120 || document.documentElement.scrollTop >= 120) {
+          $('.img-col input').attr('src', '/images/logo.svg');
+          myNav.classList.add("scroll");
+          myNav.classList.remove("no-scroll");
+        } else {
+          $('.img-col input').attr('src', '/images/logo_white.svg');
+          myNav.classList.add("no-scroll");
+          myNav.classList.remove("scroll");
+        }
+      } else {
+        if (document.body.scrollTop >= 2 || document.documentElement.scrollTop >= 2) {
+          $('.img-col input').attr('src', '/images/logo.svg');
+          myNav.classList.add("scroll");
+          myNav.classList.remove("no-scroll");
+        } else {
+          $('.img-col input').attr('src', '/images/logo_white.svg');
+          myNav.classList.add("no-scroll");
+          myNav.classList.remove("scroll");
+        }
+      }
+    } else {
+      if (document.body.scrollTop >= 160 || document.documentElement.scrollTop >= 160) {
+        $('.img-col input').attr('src', '/images/logo.svg');
+        myNav.classList.add("scroll");
+        myNav.classList.remove("no-scroll");
+      } else {
+        $('.img-col input').attr('src', '/images/logo_white.svg');
+        myNav.classList.add("no-scroll");
+        myNav.classList.remove("scroll");
+      }
+    }
+  };

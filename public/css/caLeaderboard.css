@@ -1,3 +1,282 @@
+/*Navbar*/
+/* .gradient {
+    position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);
+    z-index: 1;
+}
+
+.gradient::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(191deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 55%, rgba(77,115,230,1) 64%, rgba(0,212,255,1) 100%);
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    opacity: 0;
+    }
+
+.gradient:hover::before {
+    opacity: 1;
+} */
+header {
+  position: fixed;
+  padding: 3%;
+  z-index: 2;
+}
+
+.projects {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.past-sites {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .projects {
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+
+  .past-sites {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+
+.fa-stack {
+  border-radius: 15px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+.no-scroll .fa-stack {
+  background-color: #132b63;
+}
+
+.scroll .fa-stack {
+  background-color: white;
+}
+
+.scroll .fa-user,
+.scroll .fa-caret-down {
+  color: #132b63;
+}
+
+.no-scroll .fa-user,
+.no-scroll .fa-caret-down {
+  color: white;
+}
+
+.fixed-top {
+  padding: 4%;
+}
+
+.nav-col {
+  margin: 10px;
+}
+
+.nav-btn {
+  /*font-family: 'Inter', sans-serif;*/
+  padding: 2%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  width: 100%;
+  border-style: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  outline-style: none;
+}
+
+.scroll .nav-btn {
+  color: #132b63;
+}
+
+.no-scroll .nav-btn {
+  color: white;
+}
+
+.btn:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.scroll .btn:hover {
+  color: #132b63;
+}
+
+.no-scroll .btn:hover {
+  color: white;
+}
+
+.btn:focus,
+.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+nav.navbar {
+  background: transparent !important;
+  padding-top: 2% !important;
+  padding-left: 6% !important;
+  width: 90%;
+  padding-bottom: 0 !important;
+}
+
+.img-btn {
+  width: 65px;
+  margin-left: -18px;
+  margin-top: -10px;
+  border-radius: 100%;
+}
+
+#hor-nav {
+  padding: 0;
+  position: relative;
+  width: 80px;
+  height: 55px;
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.58, 1);
+  overflow: hidden;
+  /*background: rgb(2,0,36);
+    background: linear-gradient(160deg, rgba(2,0,36,1) 0%, rgba(94,94,225,0.98) 29%, rgba(0,212,255,1) 100%);*/
+  border-radius: 30px;
+  margin-right: 0;
+}
+
+.scroll #hor-nav {
+  background: white;
+}
+
+.no-scroll #hor-nav {
+  background: #132b63;
+}
+
+.nav-btn:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+
+.dropdown-content a:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 4px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+
+.dropdown-content .dashboard-btn:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 60px;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s;
+  width: 0;
+}
+
+.scroll .nav-btn:after,
+.scroll .dropdown-content a:after {
+  background: #132b63;
+}
+
+.no-scroll .nav-btn:after,
+.no-scroll .dropdown-content a:after {
+  background: white;
+}
+
+.nav-btn:hover:after {
+  width: 50%;
+  left: 25%;
+}
+
+.dropdown-content a:hover:after {
+  width: 50%;
+  left: 10%;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.no-scroll .dropdown-content {
+  background-color: #132b63;
+}
+
+.scroll .dropdown-content {
+  background-color: white;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+@media only screen and (max-width: 777px) {
+  .dropdown-content a {
+    padding-left: 8px;
+  }
+
+  .dropdown-content a:hover:after {
+    width: 50%;
+    left: 6%;
+  }
+}
+
+.no-scroll .dropdown-content a {
+  color: white;
+}
+
+.scroll .dropdown-content a {
+  color: #132b63;
+}
+
+/* Change color of dropdown links on hover */
+/* .dropdown-content a:hover {background-color: #ddd;} */
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 /*Huge thanks to @tobiasahlin at http://tobiasahlin.com/spinkit/ */
 .spinner {
   margin: 100px auto 0;
