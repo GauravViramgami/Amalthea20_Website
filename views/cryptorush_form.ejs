@@ -50,7 +50,10 @@
           <option>Other</option>
         </select> </div> -->
   </div>
-  <div class="form-group"> <label> Organization/ Institution* </label> <input name="institute" id="institute_" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div>
+  <div class="form-row">
+    <div class="form-group col-md-6"> <label> Organization/ Institution* </label> <input name="institute" id="institute_" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div>
+    <div class="form-group col-md-6 "> <label for="contact_number_"> Contact Number* </label> <input type="text" name="contact_number_" id="contact_number_" class="form-control" pattern="[0-9]{10}" required> </div>
+  </div>
 
   <div class="form-group" id="reference"> <label for="reference"> From where did you get to know? </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value)">
       <option value="" disabled selected style="display: none">--Please select an option--</option>
@@ -149,18 +152,20 @@
     var name = $("#name_").val();
     var email = $("#email_").val();
     var institute = $("#institute_").val();
+    var contact_number = $("#contact_number_").val();
     var reference = $("#reference_").val();
     var referrel_code = $("#referrel_code_").val();
     var timestamp = new Date().toLocaleString();
-    if (email === null || name === null || institute === null) {
+    if (email === null || name === null || institute === null || contact_number === null) {
       document.getElementById("loader_").style.display = "none";
       error_show("Please fill all the fields");
     } else {
 
-      if (email.trim() === "" || name.trim() === "" || institute.trim() === "") {
+      if (email.trim() === "" || name.trim() === "" || institute.trim() === "" || contact_number.trim() === "") {
         document.getElementById("loader_").style.display = "none";
         error_show("Please fill all the fields");
       } else {
+        if(parseInt(contact_number)<=9999999999){
         var jqxhr = $.ajax({
             url: 'https://script.google.com/macros/s/AKfycbz1Q-CtF0XSeORFioJL1EgqADO7yPCLkYaYjUTCu1ChNtJnaZU/exec',
             method: "GET",
@@ -168,6 +173,7 @@
             data: {
               Name: name,
               Institute: institute,
+              Contact: contact_number,
               Timestamp: timestamp,
               Email: email,
               Reference: reference,
@@ -182,8 +188,6 @@
               error_show("Please provide valid Email Id!");
             } else {
               error_show("Your response has been recorded!!");
-              $('#reference_').val('');
-              $('#referrel_code_').val('');
               var jqxhr = $.ajax({
                 url: 'https://script.google.com/macros/s/AKfycbzhqcwEB2u83IcFrmEiJpnMc7i8ypW9Pl5LU5_unH4jMtxdaVs/exec',
                 method: "GET",
@@ -220,6 +224,11 @@
         // xmlhttp.open("GET", "sendMail.php?name=" + name + "&email=" + email + "&institute=" + institute + "&professional_status=" + professional_status, true);
         // xmlhttp.send();
       }
+      else {
+        document.getElementById("loader_").style.display = "none";
+        error_show("Please enter valid Contact Number!");
+      }
+    }
     }
 
     //console.log(fullname, gender, institute, courseofstudy, year, email_global, contact_number, twitter_id, facebook_id, instagram_id, sop, one, two, three, four, five, six);

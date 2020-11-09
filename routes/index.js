@@ -109,7 +109,7 @@ router.get("/logout",function(req,res){
     res.redirect("/")
 })
 
-router.get("/caLeaderboard", isLogedIn, function(req, res) {
+router.get("/caLeaderboard", function(req, res) {
   res.render("caLeaderboard");
 })
 

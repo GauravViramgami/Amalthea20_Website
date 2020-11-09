@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, minimum-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CA LeaderBoard | Amalthea 2020</title>
+  <title>CA Leaderboard | Amalthea 2020</title>
   <meta name="author" content="Reuben Devanesan, B.Tech Chemical Engineering | Gaurav Viramgami, B.Tech Computer Science | Harshit Ramolia, B.Tech Chemical Engineering">
   <meta name="description" value="Amalthea is the Annual Tech Summit of IIT Gandhinagar.">
   <link rel="icon" href="\images\Amalthea_title_logo.png">
   <!--Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="\css\caLeaderboard.css">
   <link rel="stylesheet" href="\css\common.css">
   <!--Fonts-->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,23 +21,368 @@
   <script src="https://kit.fontawesome.com/9d7cc8090d.js" crossorigin="anonymous"></script>
 </head>
 
-<div class="back">
-    <a href="http://amalthea.iitgn.ac.in"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
-  </div>
-  <div class="logo_form">
-    <img src="/images/logo.svg" alt="">
-  </div>
-  <div class="logo_text">
-    AMALTHEA '20
-  </div>
+<%- include('partials/header') %>
 
-  <%- include('partials/footer') %>
+<br><br><br><br>
+<div class="heading" id="heading">
+  <h1>CA Leaderboard</h1>
+</div>
+<!--Temporary Content-->
+<div class="spinner" id="loading">
+  <div class="bounce1"></div>
+  <div class="bounce2"></div>
+  <div class="bounce3"></div>
+</div>
+<div class="loaded shadow" id="loaded">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Position</th>
+        <th scope="col">Code</th>
+        <th scope="col">Total Points</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td id="code1"></td>
+        <td id="points1"></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td id="code2"></td>
+        <td id="points2"></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td id="code3"></td>
+        <td id="points3"></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td id="code4"></td>
+        <td id="points4"></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td id="code5"></td>
+        <td id="points5"></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td id="code6"></td>
+        <td id="points6"></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td id="code7"></td>
+        <td id="points7"></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td id="code8"></td>
+        <td id="points8"></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td id="code9"></td>
+        <td id="points9"></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td id="code10"></td>
+        <td id="points10"></td>
+      </tr>
+      <tr>
+        <th scope="row">11</th>
+        <td id="code11"></td>
+        <td id="points11"></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td id="code12"></td>
+        <td id="points12"></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td id="code13"></td>
+        <td id="points13"></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td id="code14"></td>
+        <td id="points14"></td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td id="code15"></td>
+        <td id="points15"></td>
+      </tr>
+      <tr>
+        <th scope="row">16</th>
+        <td id="code16"></td>
+        <td id="points16"></td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td id="code17"></td>
+        <td id="points17"></td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td id="code18"></td>
+        <td id="points18"></td>
+      </tr>
+      <tr>
+        <th scope="row">19</th>
+        <td id="code19"></td>
+        <td id="points19"></td>
+      </tr>
+      <tr>
+        <th scope="row">20</th>
+        <td id="code20"></td>
+        <td id="points20"></td>
+      </tr>
+      <tr>
+        <th scope="row">21</th>
+        <td id="code21"></td>
+        <td id="points21"></td>
+      </tr>
+      <tr>
+        <th scope="row">22</th>
+        <td id="code22"></td>
+        <td id="points22"></td>
+      </tr>
+      <tr>
+        <th scope="row">23</th>
+        <td id="code23"></td>
+        <td id="points23"></td>
+      </tr>
+      <tr>
+        <th scope="row">24</th>
+        <td id="code24"></td>
+        <td id="points24"></td>
+      </tr>
+      <tr>
+        <th scope="row">25</th>
+        <td id="code25"></td>
+        <td id="points25"></td>
+      </tr>
+      <tr>
+        <th scope="row">26</th>
+        <td id="code26"></td>
+        <td id="points26"></td>
+      </tr>
+      <tr>
+        <th scope="row">27</th>
+        <td id="code27"></td>
+        <td id="points27"></td>
+      </tr>
+      <tr>
+        <th scope="row">28</th>
+        <td id="code28"></td>
+        <td id="points28"></td>
+      </tr>
+      <tr>
+        <th scope="row">29</th>
+        <td id="code29"></td>
+        <td id="points29"></td>
+      </tr>
+      <tr>
+        <th scope="row">30</th>
+        <td id="code30"></td>
+        <td id="points30"></td>
+      </tr>
+      <tr>
+        <th scope="row">31</th>
+        <td id="code31"></td>
+        <td id="points31"></td>
+      </tr>
+      <tr>
+        <th scope="row">32</th>
+        <td id="code32"></td>
+        <td id="points32"></td>
+      </tr>
+      <tr>
+        <th scope="row">33</th>
+        <td id="code33"></td>
+        <td id="points33"></td>
+      </tr>
+      <tr>
+        <th scope="row">34</th>
+        <td id="code34"></td>
+        <td id="points34"></td>
+      </tr>
+      <tr>
+        <th scope="row">35</th>
+        <td id="code35"></td>
+        <td id="points35"></td>
+      </tr>
+      <tr>
+        <th scope="row">36</th>
+        <td id="code36"></td>
+        <td id="points36"></td>
+      </tr>
+      <tr>
+        <th scope="row">37</th>
+        <td id="code37"></td>
+        <td id="points37"></td>
+      </tr>
+      <tr>
+        <th scope="row">38</th>
+        <td id="code38"></td>
+        <td id="points38"></td>
+      </tr>
+      <tr>
+        <th scope="row">39</th>
+        <td id="code39"></td>
+        <td id="points39"></td>
+      </tr>
+      <tr>
+        <th scope="row">40</th>
+        <td id="code40"></td>
+        <td id="points40"></td>
+      </tr>
+      <tr>
+        <th scope="row">41</th>
+        <td id="code41"></td>
+        <td id="points41"></td>
+      </tr>
+      <tr>
+        <th scope="row">42</th>
+        <td id="code42"></td>
+        <td id="points42"></td>
+      </tr>
+      <tr>
+        <th scope="row">43</th>
+        <td id="code43"></td>
+        <td id="points43"></td>
+      </tr>
+      <tr>
+        <th scope="row">44</th>
+        <td id="code44"></td>
+        <td id="points44"></td>
+      </tr>
+      <tr>
+        <th scope="row">45</th>
+        <td id="code45"></td>
+        <td id="points45"></td>
+      </tr>
+      <tr>
+        <th scope="row">46</th>
+        <td id="code46"></td>
+        <td id="points46"></td>
+      </tr>
+      <tr>
+        <th scope="row">47</th>
+        <td id="code47"></td>
+        <td id="points47"></td>
+      </tr>
+      <tr>
+        <th scope="row">48</th>
+        <td id="code48"></td>
+        <td id="points48"></td>
+      </tr>
+      <tr>
+        <th scope="row">49</th>
+        <td id="code49"></td>
+        <td id="points49"></td>
+      </tr>
+      <tr>
+        <th scope="row">50</th>
+        <td id="code50"></td>
+        <td id="points50"></td>
+      </tr>
+      <tr>
+        <th scope="row">51</th>
+        <td id="code51"></td>
+        <td id="points51"></td>
+      </tr>
+      <tr>
+        <th scope="row">52</th>
+        <td id="code52"></td>
+        <td id="points52"></td>
+      </tr>
+      <tr>
+        <th scope="row">53</th>
+        <td id="code53"></td>
+        <td id="points53"></td>
+      </tr>
+      <tr>
+        <th scope="row">54</th>
+        <td id="code54"></td>
+        <td id="points54"></td>
+      </tr>
+      <tr>
+        <th scope="row">55</th>
+        <td id="code55"></td>
+        <td id="points55"></td>
+      </tr>
+      <tr>
+        <th scope="row">56</th>
+        <td id="code56"></td>
+        <td id="points56"></td>
+      </tr>
+      <tr>
+        <th scope="row">57</th>
+        <td id="code57"></td>
+        <td id="points57"></td>
+      </tr>
+      <tr>
+        <th scope="row">58</th>
+        <td id="code58"></td>
+        <td id="points58"></td>
+      </tr>
+      <tr>
+        <th scope="row">59</th>
+        <td id="code59"></td>
+        <td id="points59"></td>
+      </tr>
+      <tr>
+        <th scope="row">60</th>
+        <td id="code60"></td>
+        <td id="points60"></td>
+      </tr>
+      <tr>
+        <th scope="row">61</th>
+        <td id="code61"></td>
+        <td id="points61"></td>
+      </tr>
+      <tr>
+        <th scope="row">62</th>
+        <td id="code62"></td>
+        <td id="points62"></td>
+      </tr>
+      <tr>
+        <th scope="row">63</th>
+        <td id="code63"></td>
+        <td id="points63"></td>
+      </tr>
+      <tr>
+        <th scope="row">64</th>
+        <td id="code64"></td>
+        <td id="points64"></td>
+      </tr>
+      <tr>
+        <th scope="row">65</th>
+        <td id="code65"></td>
+        <td id="points65"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="update-spacing"></div>
 
-  <!--Bootstrap-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <script src="/js/subscribe.js"></script>
+<%- include('partials/footer') %>
+
+<!--Bootstrap-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="/js/caLeaderboard.js"></script>
+<script src="/js/navbar.js"></script>
+<script src="/js/subscribe.js"></script>
 </body>
+
 </html>
