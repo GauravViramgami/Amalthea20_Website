@@ -21,6 +21,18 @@ router.get("/", function (req, res) {
 
 })
 
+router.get("/CampusAmbassador", function (req, res) {
+
+  res.render("CampusAmbassador/index")
+
+})
+
+router.get("/registrationCA", function (req, res) {
+
+  res.render("CampusAmbassador/registration/index")
+
+})
+
 router.get("/events", function (req, res) {
   let event = req.query.event;
   if (event != "cryptorush" && event != "dcode" && event != "icon" && event != "cryptix" && event != "quickwit") {
@@ -48,6 +60,12 @@ router.get("/cryptorush_form", function (req, res) {
 router.get("/contact", function (req, res) {
 
   res.render("contact")
+
+})
+
+router.get("/symposium", function (req, res) {
+
+  res.render("symposium")
 
 })
 

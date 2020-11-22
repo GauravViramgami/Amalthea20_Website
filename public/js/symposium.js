@@ -28,7 +28,7 @@ window.onscroll = function() {
       }
     }
   } else {
-    if (document.body.scrollTop >= 800 || document.documentElement.scrollTop >= 800) {
+    if (document.body.scrollTop >= 700 || document.documentElement.scrollTop >= 700) {
       $('.img-col input').attr('src', '/images/logo_white.svg');
       myNav.classList.add("scroll");
       myNav.classList.remove("no-scroll");
