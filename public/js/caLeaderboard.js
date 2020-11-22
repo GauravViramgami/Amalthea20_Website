@@ -21,11 +21,53 @@ var jqxhr = $.ajax({
       return b[1]-a[1]
     });
 
+    var position = 1;
+    var index = 0;
+    CAs[index].push(position);
+    var prev = CAs[index][1];
+    index = 1;
+    var current = CAs[index][1];
+    while (index < CAs.length) {
+      while (index < CAs.length && current === prev) {
+        CAs[index].push(position);
+        index++;
+        if (index < CAs.length) {
+          current = CAs[index][1];
+        }
+      }
+      if (index < CAs.length) {
+        prev = CAs[index][1];
+        CAs[index++].push(++position);
+        if (index < CAs.length) {
+          current = CAs[index][1];
+        } else {
+          break;
+        }
+      } else {
+        break;
+      }
+    }
+
     for (var i = 0; i < CAs.length; i++) {
-      var codeID = "code" + (i+1).toString();
-      var pointsID = "points" + (i+1).toString();
-      document.getElementById(codeID).innerHTML = CAs[i][0];
-      document.getElementById(pointsID).innerHTML = CAs[i][1];
+      //var codeID = "code" + (i+1).toString();
+      //var pointsID = "points" + (i+1).toString();
+      var tbody = document.getElementById("tbody");
+      var row = document.createElement("tr");
+      var cell1 = document.createElement("th");
+      var cell2 = document.createElement("td");
+      var cell3 = document.createElement("td");
+      var cell1Text = document.createTextNode(CAs[i][2]);
+      var cell2Text = document.createTextNode(CAs[i][0]);
+      var cell3Text = document.createTextNode(CAs[i][1]);
+      cell1.appendChild(cell1Text);
+      cell2.appendChild(cell2Text);
+      cell3.appendChild(cell3Text);
+      row.appendChild(cell1);
+      row.appendChild(cell2);
+      row.appendChild(cell3);
+      tbody.appendChild(row);
+      //document.getElementById(codeID).innerHTML = CAs[i][0];
+      //document.getElementById(pointsID).innerHTML = CAs[i][1];
     }
 
     document.getElementById("loading").style.display = "none";
@@ -61,5 +103,5 @@ var jqxhr = $.ajax({
           myNav.classList.remove("scroll");
         }
       }
-    } 
+    }
   };
