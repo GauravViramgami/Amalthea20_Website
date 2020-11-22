@@ -74,11 +74,11 @@ div.update-spacing{
 
 @media only screen and (max-width: 777px) {
   #symposiumSlide {
-    height: 60vw;
+    height: 70vw;
   }
 
   .symposium-slide {
-    height: 60vw;
+    height: 70vw;
   }
 }
 
