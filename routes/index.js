@@ -69,6 +69,12 @@ router.get("/symposium", function (req, res) {
 
 })
 
+router.get("/symposium_form", function(req, res) {
+
+  res.render("symposium_form")
+
+})
+
 router.get("/amalthea_project", function (req, res) {
 
   res.render("amalthea_project")
@@ -100,7 +106,6 @@ router.get("/webinar_form", function (req, res) {
   res.render("webinar_form", {ref: ref})
 
 })
-
 
 router.get("/sponsors", function (req, res) {
 
