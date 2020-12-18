@@ -1,4 +1,4 @@
-# Amalthea '20 Website
+# Amalthea 2020 Website
 
 NodeJS based Amalthea '20 Website.
 
