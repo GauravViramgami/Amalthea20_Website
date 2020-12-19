@@ -7,7 +7,7 @@ var mongoose = require("mongoose"),
   GoogleStrategy = require('passport-google-oauth20').Strategy
 // findOrCreate = require('mongoose-findorcreate')
 
-mongoose.connect("mongodb+srv://gaurav:gaurav@cluster0.8f0ei.mongodb.net/Amalthea?retryWrites=true&w=majority", {
+mongoose.connect("", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
