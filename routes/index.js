@@ -35,14 +35,28 @@ router.get("/registrationCA", function (req, res) {
 
 router.get("/events", function (req, res) {
   let event = req.query.event;
-  if (event != "cryptorush" && event != "dcode" && event != "icon" && event != "cryptix" && event != "quickwit") {
-    event = "cryptorush";
+  if (event != "cryptorush" && event != "gamejam" && event != "dcode" && event != "icon" && event != "cryptix" && event != "quickwit" && event != "autodesk") {
+    event = "autodesk";
   }
   res.render("events", {event: event})
 
 })
 
-router.get("/cryptorush_form", function (req, res) {
+// router.get("/cryptorush_form", function (req, res) {
+//   let ref = req.query.ref;
+//   if (ref === undefined) {
+//     ref = -1;
+//   } else {
+//     ref = ref.toString();
+//     if (ref.length === 3 && ref.substring(0,1) === "0" && ref.substring(1,2) != "0") {
+//       ref = ref.substring(1,4);
+//     }
+//   }
+//   res.render("cryptorush_form", {ref: ref})
+
+// })
+
+router.get("/autodesk_form", function (req, res) {
   let ref = req.query.ref;
   if (ref === undefined) {
     ref = -1;
@@ -52,10 +66,9 @@ router.get("/cryptorush_form", function (req, res) {
       ref = ref.substring(1,4);
     }
   }
-  res.render("cryptorush_form", {ref: ref})
+  res.render("autodesk_form", {ref: ref})
 
 })
-
 
 router.get("/contact", function (req, res) {
 
@@ -69,11 +82,11 @@ router.get("/symposium", function (req, res) {
 
 })
 
-router.get("/symposium_form", function(req, res) {
+// router.get("/symposium_form", function(req, res) {
 
-  res.render("symposium_form")
+//   res.render("symposium_form")
 
-})
+// })
 
 router.get("/amalthea_project", function (req, res) {
 
@@ -93,19 +106,19 @@ router.get("/webinars", function (req, res) {
 
 })
 
-router.get("/webinar_form", function (req, res) {
-  let ref = req.query.ref;
-  if (ref === undefined) {
-    ref = -1;
-  } else {
-    ref = ref.toString();
-    if (ref.length === 3 && ref.substring(0,1) === "0" && ref.substring(1,2) != "0") {
-      ref = ref.substring(1,4);
-    }
-  }
-  res.render("webinar_form", {ref: ref})
+// router.get("/webinar_form", function (req, res) {
+//   let ref = req.query.ref;
+//   if (ref === undefined) {
+//     ref = -1;
+//   } else {
+//     ref = ref.toString();
+//     if (ref.length === 3 && ref.substring(0,1) === "0" && ref.substring(1,2) != "0") {
+//       ref = ref.substring(1,4);
+//     }
+//   }
+//   res.render("webinar_form", {ref: ref})
 
-})
+// })
 
 router.get("/sponsors", function (req, res) {
 
