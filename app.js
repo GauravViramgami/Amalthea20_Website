@@ -7,7 +7,7 @@ var mongoose = require("mongoose"),
   GoogleStrategy = require('passport-google-oauth20').Strategy
 // findOrCreate = require('mongoose-findorcreate')
 
-mongoose.connect("mongodb+srv://gaurav:gaurav@cluster0.8f0ei.mongodb.net/Amalthea?retryWrites=true&w=majority", {
+mongoose.connect("//", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
@@ -46,8 +46,8 @@ app.use(function(req,res,next){
 })
 
 passport.use(new GoogleStrategy({
-    clientID: "135466675044-749r5mhebcd0rvbnf9se8rcumjmttk0k.apps.googleusercontent.com",
-    clientSecret: "sd4H51v5zVEn_CRmnoxB8HfH",
+    clientID: "//",
+    clientSecret: "//",
     callbackURL: "https://amalthea.iitgn.ac.in/auth/google/secrets",
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
