@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AICHE | Amalthea 2020</title>
+  <meta name="author" content="Reuben Devanesan, B.Tech Chemical Engineering | Gaurav Viramgami, B.Tech Computer Science | Harshit Ramolia, B.Tech Chemical Engineering">
+  <meta name="description" value="Amalthea is the Annual Tech Summit of IIT Gandhinagar.">
+  <link rel="icon" href="\images\Amalthea_title_logo.png">
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="\css\webinar_form.css">
+  <link rel="stylesheet" href="\css\common.css">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+  <!--Inter-->
+  <script src="https://kit.fontawesome.com/9d7cc8090d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="back">
+    <a href="/events"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+  </div>
+  <div class="logo_form">
+    <img src="/images/logo.svg" alt="">
+  </div>
+  <div class="logo_text">
+    AMALTHEA '20
+  </div>
+
+  <!-- form -->
+  <div class="content card shadow">
+    <div>
+      <h2>REGISTER FOR AICHE</h2>
+    </div>
+    <hr>
+   <br>
+    <div class="form-row ">
+      <div class="form-group col-md-6"> <label> Name* </label> <input name="name" id="name_" type="text" class="form-control" placeholder="Name" required> </div>
+      <div class="form-group col-md-6 "> <label for="email"> Email ID* </label>
+        <div class="input-group "> <input type="email" name="email" id="email_" class="form-control" placeholder="Email ID" required> </div>
+      </div>
+      <!-- <div class="form-group col-md-6 "> <label for="gender"> Gender </label> <select name="gender" id="gender" class="form-control" required>
+          <option value="" disabled selected style="display: none">--Please select an option--</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select> </div> -->
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6"> <label> Organization/ Institution* </label> <input name="institute" id="institute_" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div>
+      <div class="form-group col-md-6"> <label> Contact Number* </label> <input type="text" name="contact_number_" id="contact_number_" class="form-control" placeholder="Contact Number" pattern="[0-9]{10}" required> </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6"> <label> Programme* </label> <input name="programme" id="programme_" class="form-control" placeholder="Ex: B.Tech, M.Tech" required> </div>
+      <div class="form-group col-md-6"> <label> Discipline* </label> <input name="discipline" id="discipline_" class="form-control" placeholder="Ex: Chemical Engineering" required> </div>
+    </div>
+      <div class="form-group" id="reference"> <label for="reference"> From where did you get to know?* </label> <select id="reference_" name="reference" class="form-control" onchange="CheckCA(this.value)" required>
+          <option value="" disabled selected style="display: none">--Please select an option--</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Campus Ambassador Program">Campus Ambassador Program</option>
+          <option value="E-Mail">E-Mail</option>
+          <option value="Peers">Peers</option>
+          <option value="Others">Others</option>
+        </select> </div>
+      <div class="form-group" id="referrel-code"> <label> Referral Code </label> <input name="referrel_code" id="referrel_code_" class="form-control" placeholder="Referral Code"> </div>
+      <!-- <div class="form-group col-md-6 "> <label for="year"> Graduating Year </label> <input type="number" name="year" id="year" min="2019" max="2026" class="form-control" placeholder="Ex: 2021" required> </div> -->
+
+    <!-- <div class="form-row ">
+
+      <div class="form-group col-md-6 "> <label for="contact_number"> Contact Number </label> <input type="text" name="contact_number" id="contact_number" class="form-control" placeholder="Contact" pattern="[0-9]{10}" required> </div>
+    </div> -->
+    <br>
+    <div class="form-group submit"> <button type="submit" id="btnsbt_" onclick="_submitForm()" class="btn btn-info_"> Submit </button> </div>
+    <div id="loader_">
+      <div class="loader-wheel_"></div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="content card shadow">
+    <h5>Note:</h5>
+    <h6>Please check your email inbox.</h6>
+    <h6>If you do not receive a confirmation mail from Amalthea (<a href="mailto:amalthea@iitgn.ac.in">amalthea@iitgn.ac.in</a>) in 1 to 2 minutes:</h6>
+    <h6>1. Please verify your Email ID</h6>
+    <h6>2. Try to use Gmail ID or Institute ID</h6>
+    <h6>3. Contact us at: <a href="mailto:amalthea@iitgn.ac.in">amalthea@iitgn.ac.in</a></h6>
+    <h6>Or Contact:</h6>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h6>Sresth Tosniwal</h6>
+        <h6><a href="mailto:sresth.t@iitgn.ac.in">sresth.t@iitgn.ac.in</a></h6>
+        <h6>+91 9429530407</h6>
+        <hr>
+      </div>
+      <div class="col-sm-12 col-md-6 col-lg-6">
+        <h6>Shubhi Maheshwari</h6>
+        <h6><a href="mailto:shubhi.maheshwari@iitgn.ac.in">shubhi.maheshwari@iitgn.ac.in</a></h6>
+        <h6>+91 8290701802</h6>
+        <hr>
+      </div>
+    </div>
+  </div>
+
+  <div id="snackbar_"></div>
+
+  <%- include('partials/footer') %>
+
+  <script type="text/javascript">
+    _linkedin_partner_id = "2903449";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function() {
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript";
+      b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })();
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=2903449&fmt=gif" />
+  </noscript>
+
+
+  <!--Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript">
+
+    var ref = <%= ref %> ;
+    if (ref != -1) {
+      document.getElementById("reference").style.display = "none";
+      $('#reference_').val('Campus Ambassador Program');
+      //var element = document.getElementById("referrel-code");
+      //element.style.display = "block";
+      $('#referrel_code_').val(validateCode(ref));
+    }
+
+    function validateCode(ref) {
+      var c = ref.toString().toUpperCase().replace(/\s/g, "");
+      var l = c.length;
+      if (l === 1) {
+        return "AML20-00" + c;
+      } else if (l === 2) {
+        return "AML20-0" + c;
+      } else if (l === 3) {
+        return "AML20-" + c;
+      } else {
+        return c;
+      }
+    }
+
+
+    function CheckCA(val) {
+      var element = document.getElementById("referrel-code");
+      if (val == "Campus Ambassador Program") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+
+    // var innerHTML = '<div><h2>REGISTER FOR THE WEBINAR</h2></div><hr><div class="registrationText"> Please fill the below form (All fields are mandatory) </div> <br><div class="form-row "><div class="form-group col-md-6"> <label> Full Name </label> <input name="fullname" id="fullname" type="text" class="form-control" placeholder="Full Name" required> </div><div class="form-group col-md-6 "> <label for="gender"> Gender </label> <select name="gender" id="gender" class="form-control" required><option value="" disabled selected style="display: none">--Please select an option--</option><option>Male</option><option>Female</option><option>Other</option></select> </div></div><div class="form-group"> <label> Institute Name & Address </label> <input name="institute" id="institute" class="form-control" placeholder="Ex: IIT Gandhinagar, Palaj, Gandhinagar, Gujarat" required> </div><div class="form-row"><div class="form-group col-md-6 "> <label for="courseofstudy"> Program </label> <select id="courseofstudy" name="courseofstudy" class="form-control" required><option value="" disabled selected style="display: none">--Please select an option--</option><option value="Bachelors">Bachelors</option><option value="Masters">Masters</option><option value="Doctorate">Doctorate</option><option value="Other">Other</option></select> </div><div class="form-group col-md-6 "> <label for="year"> Graduating Year </label> <input type="number" name="year" id="year" min="2019" max="2026" class="form-control" placeholder="Ex: 2021" required> </div></div><div class="form-row "><div class="form-group col-md-6 "> <label for="email"> Mail ID </label><div class="input-group "> <input type="email" name="email" id="email" class="form-control" placeholder="Email" required> </div></div><div class="form-group col-md-6 "> <label for="contact_number"> Contact Number (WhatsApp) </label> <input type="text" name="contact_number" id="contact_number" class="form-control" pattern="[0-9]{10}" required> </div></div><br><br><div class="form-group submit"> <button type="submit" id="btnsbt" onclick="submitForm()" class="btn btn-info"> Submit </button> </div>';
+    function _submitForm() {
+      document.getElementById("loader_").style.display = "block";
+      var name = $("#name_").val();
+      var email = $("#email_").val();
+      var institute = $("#institute_").val();
+      var contact_number = $("#contact_number_").val();
+      var programme = $("#programme_").val();
+      var discipline = $("#discipline_").val();
+      var reference = $("#reference_").val();
+      var referrel_code = $("#referrel_code_").val();
+      var timestamp = new Date().toLocaleString();
+      if (email === null || name === null || institute === null || contact_number === null || programme === null || discipline === null || reference === null) {
+        document.getElementById("loader_").style.display = "none";
+        error_show("Please fill all the fields");
+      } else {
+
+        if (email.trim() === "" || name.trim() === "" || institute.trim() === "" || contact_number.trim() === "" || programme.trim() === "" || discipline.trim() === "" || reference.trim() === "") {
+          document.getElementById("loader_").style.display = "none";
+          error_show("Please fill all the fields");
+        } else {
+          if(parseInt(contact_number)<=9999999999){
+          var jqxhr = $.ajax({
+            url: 'https://script.google.com/macros/s/AKfycbzMeyx9-UCG6cdLSzgiNg44AQRT_raCJjLiaStwgyMRxn0adk1TXsA7sQ/exec',
+            method: "GET",
+            dataType: "json",
+            data: {
+              Name: name,
+              Institute: institute,
+              Contact: contact_number,
+              Timestamp: timestamp,
+              Email: email,
+              Programme: programme,
+              Discipline: discipline,
+              Reference: reference,
+              Referrel_code: referrel_code
+            }
+          })
+          .then(function(doRef) {
+            document.getElementById("loader_").style.display = "none";
+            if (doRef["result"] === "success") {
+            if (doRef["row"] === "Already_Registered") {
+              error_show("You have already registered!");
+            } else if (doRef["row"] === "Invalid") {
+              error_show("Please provide valid Email Id!");
+            } else {
+              error_show("Your response has been recorded!!");
+              var jqxhr = $.ajax({
+                url: 'https://script.google.com/macros/s/AKfycbzhqcwEB2u83IcFrmEiJpnMc7i8ypW9Pl5LU5_unH4jMtxdaVs/exec',
+                method: "GET",
+                dataType: "json",
+                data: {
+                  Column: "20",
+                  Referrel_code: referrel_code
+                }
+              });
+            }
+            } else {
+                error_show("Please try again!");
+            }
+            $("#name_").val('');
+            $("#email_").val('');
+            $('#institute_').val('');
+            $('#contact_number_').val('');
+            $('#programme_').val('');
+            $('#discipline_').val('');
+          });
+          //  var xmlhttp = new XMLHttpRequest();
+          // xmlhttp.onreadystatechange = function() {
+          //   if (this.readyState == 4 && this.status == 200) {
+          //     var response = this.responseText;
+          //     if (response == "done") {
+          //       document.getElementById("loader").style.display = "none";
+          //       error_show("Your response has been recorded!!");
+          //       $("#name").val('');
+          //       $("#email").val('');
+          //       $('#institute').val('');
+          //       $('#professional_status').val('');
+          //
+          //     } else {
+          //       document.getElementById("loader").style.display = "none";
+          //       //$(".alertSubscribeTop").html("Please try again");
+          //       error_show("Please try again");
+          //     }
+          //   }
+          // };
+          // xmlhttp.open("GET", "sendMail.php?name=" + name + "&email=" + email + "&institute=" + institute + "&professional_status=" + professional_status, true);
+          // xmlhttp.send();
+        }
+        else {
+            document.getElementById("loader_").style.display = "none";
+            error_show("Please enter valid Contact Number!");
+        }
+        }
+      }
+
+      //console.log(fullname, gender, institute, courseofstudy, year, email_global, contact_number, twitter_id, facebook_id, instagram_id, sop, one, two, three, four, five, six);
+    }
+
+    function error_show(e) {
+      var x = document.getElementById("snackbar_");
+      x.innerHTML = e;
+      x.className = "show";
+      setTimeout(function() {
+        x.className = x.className.replace("show", "");
+      }, 3000);
+    }
+  </script>
+  <script src="/js/subscribe.js"></script>
+
+</body>
+</html>
